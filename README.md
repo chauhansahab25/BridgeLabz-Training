@@ -2,7 +2,7 @@
 
 | Field | Description |
 |------|------------|
-| Repository Name | Core C# Practice |
+| Repository Name | BridgeLabz-Training |
 | Training Program | BridgeLabz |
 | Language | C# |
 | Framework | .NET |
@@ -107,5 +107,6 @@ Focus Area: C# Language Features
 | Name |
 |------|
 | Priyanshu Chauhan |
+
 
 
