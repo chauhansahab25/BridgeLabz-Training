@@ -12,7 +12,7 @@
 | Repository Name | BridgeLabz-Training |
 | Practice Module | Core C# Practice |
 | Main Repository Link | https://github.com/chauhansahab25/BridgeLabz-Training |
-| Core C# Folder Link | https://github.com/chauhansahab25/BridgeLabz-Training/tree/main/core-csharp-practice |
+| Core C# Folder Link | https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice |
 
 ---
 
@@ -20,9 +20,9 @@
 
 | Folder Name | Description | Link |
 |------------|------------|------|
-| gcr-codebase | Guided Code Review based Core C# programs | https://github.com/chauhansahab25/BridgeLabz-Training/tree/main/core-csharp-practice/gcr-codebase |
-| leet-code-codebase | Logic & algorithm-based coding problems | https://github.com/chauhansahab25/BridgeLabz-Training/tree/main/core-csharp-practice/leet-code-codebase |
-| scenario-based | Real-world scenario-based C# implementations | https://github.com/chauhansahab25/BridgeLabz-Training/tree/main/core-csharp-practice/scenario-based |
+| gcr-codebase | Guided Code Review based Core C# programs | https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/gcr-codebase |
+| leet-code-codebase | Logic & algorithm-based coding problems | https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/leet-code-codebase |
+| scenario-based | Real-world scenario-based C# implementations | https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/scenario-based |
 
 ---
 
@@ -60,11 +60,11 @@
 
 ---
 
-## 👤 Author Details
+## 👤 Maintained by
 
-| Name | Program |
-|----|--------|
-| **Priyanshu Chauhan** | BridgeLabz Training |
+| Name | 
+|----|
+| **Priyanshu Chauhan** | 
 
 ---
 
@@ -73,3 +73,4 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz training for learning, practice, and assessment purposes. |
+
