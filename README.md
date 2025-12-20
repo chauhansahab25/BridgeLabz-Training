@@ -15,9 +15,9 @@
 
 | Folder Name | Description | Link |
 |------------|------------|------|
-| gcr-codebase | Guided Code Review based Core C# programs | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/main/core-csharp-practice/gcr-codebase) |
-| leet-code-codebase | Logic & algorithm problems (LeetCode style) | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/main/core-csharp-practice/leet-code-codebase) |
-| scenario-based | Real-world scenario-based C# programs | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/main/core-csharp-practice/scenario-based) |
+| gcr-codebase | Guided Code Review based Core C# programs | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/gcr-codebase) |
+| leet-code-codebase | Logic & algorithm problems (LeetCode style) | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/leet-code-codebase) |
+| scenario-based | Real-world scenario-based C# programs | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/scenario-based) |
 
 ---
 
@@ -107,3 +107,4 @@ Focus Area: C# Language Features
 | Name |
 |------|
 | Priyanshu Chauhan |
+
