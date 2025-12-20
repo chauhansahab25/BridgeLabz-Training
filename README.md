@@ -16,18 +16,16 @@
 
 ---
 
-## 📂 Codebase Structure
+## 📂 Repository Structure
 
 | Folder Name | Description | Link |
 |------------|------------|------|
 | gcr-codebase | Guided Code Review based Core C# programs | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/gcr-codebase) |
-
-| leet-code-codebase | Logic & algorithm-based coding problems | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/leet-code-codebase) |
-
-| scenario-based | Real-world scenario-based C# implementations | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/scenario-based) |
-
+| leet-code-codebase | Logic & algorithm problems (LeetCode style) | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/leet-code-codebase) |
+| scenario-based | Real-world scenario-based C# programs | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/scenario-based) |
 
 ---
+
 
 ## 🎯 Learning Objectives
 
@@ -76,5 +74,6 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz training for learning, practice, and assessment purposes. |
+
 
 
