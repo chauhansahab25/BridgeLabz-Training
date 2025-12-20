@@ -46,7 +46,9 @@
 | **Day 1** | Tuesday, December 16, 2025 | GitHub Foundations | 📚 Training kickoff session<br>💡 GitHub fundamentals<br>🔧 Repository & branch setup<br>✅ Solved 2 introductory Java programs |
 | **Day 2** | Wednesday, December 17, 2025 | Advanced GitHub Techniques | 🔍 Advanced GitHub workflows<br>📖 Branching & version control<br>💻 Solved foundational programming problems |
 | **Day 3** | Thursday, December 18, 2025 | Introduction to .NET & C# | ⚙️ Installed .NET & IDE setup<br>🏗️ Studied CLR, MSIL & JIT<br>📝 Learned C# syntax & variables<br>🎯 Solved 10 C# problems + 2 LeetCode |
-| **Day 4** | Friday, December 19, 2025 | CLR Architecture & Core C# | 💎 In-depth CLR understanding<br>🔐 Access modifiers<br>📊 Data types & naming conventions<br>➕ Operators<br>🏆 Completed Level 1 & 2 assignments + 2 LeetCode |
+| **Day 4** | Friday, December 19, 2025 | CLR Architecture & Core C# | 💎 In-depth CLR understanding<br>📊 Data types & naming conventions<br>➕ Operators<br>🏆 Completed Level 1 assignments + 2 LeetCode |
+| **Day 5** | Saturday, December 20, 2025 | C# Assignments & Problem Solving | 🧠 Strengthened understanding of C# concepts through practice<br>🔐 Access modifiers<br>🏆 Completed Level 2 assignments<br>🎯 Solved 2 LeetCode problems |
+
 
 ---
 
@@ -74,6 +76,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz training for learning, practice, and assessment purposes. |
+
 
 
 
