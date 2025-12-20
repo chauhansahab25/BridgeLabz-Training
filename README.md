@@ -7,7 +7,7 @@
 | Language | C# |
 | Framework | .NET |
 | Main Repository | [BridgeLabz-Training](https://github.com/chauhansahab25/BridgeLabz-Training) |
-| Core C# Folder | [core-csharp-practice](https://github.com/chauhansahab25/BridgeLabz-Training/tree/main/core-csharp-practice) |
+| Core C# Folder | [core-csharp-practice](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice) |
 
 ---
 
@@ -107,4 +107,5 @@ Focus Area: C# Language Features
 | Name |
 |------|
 | Priyanshu Chauhan |
+
 
