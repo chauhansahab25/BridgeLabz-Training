@@ -1,112 +1,75 @@
-# Core Csharp Practice – BridgeLabz Training
-
-| Field | Description |
-|------|------------|
-| Repository Name | BridgeLabz-Training |
-| Training Program | BridgeLabz |
-| Language | C# |
-| Framework | .NET |
-| Main Repository | [BridgeLabz-Training](https://github.com/chauhansahab25/BridgeLabz-Training) |
-| Core C# Folder | [core-csharp-practice](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice) |
+# Core C# Practice – BridgeLabz Training
 
 ---
 
-## 📂 Repository Structure
+## 📌 Repository Information
+
+| Field | Details |
+|-----|--------|
+| Training Program | BridgeLabz |
+| Technology | Core C# |
+| Framework | .NET |
+| Repository Name | BridgeLabz-Training |
+| Practice Module | Core C# Practice |
+| Main Repository Link | https://github.com/chauhansahab25/BridgeLabz-Training |
+| Core C# Folder Link | https://github.com/chauhansahab25/BridgeLabz-Training/tree/main/core-csharp-practice |
+
+---
+
+## 📂 Codebase Structure
 
 | Folder Name | Description | Link |
 |------------|------------|------|
-| gcr-codebase | Guided Code Review based Core C# programs | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/gcr-codebase) |
-| leet-code-codebase | Logic & algorithm problems (LeetCode style) | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/leet-code-codebase) |
-| scenario-based | Real-world scenario-based C# programs | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/scenario-based) |
+| gcr-codebase | Guided Code Review based Core C# programs | https://github.com/chauhansahab25/BridgeLabz-Training/tree/main/core-csharp-practice/gcr-codebase |
+| leet-code-codebase | Logic & algorithm-based coding problems | https://github.com/chauhansahab25/BridgeLabz-Training/tree/main/core-csharp-practice/leet-code-codebase |
+| scenario-based | Real-world scenario-based C# implementations | https://github.com/chauhansahab25/BridgeLabz-Training/tree/main/core-csharp-practice/scenario-based |
 
 ---
 
 ## 🎯 Learning Objectives
 
-| Objective |
-|----------|
-| Strengthen Core C# fundamentals |
-| Improve logical problem-solving |
-| Practice object-oriented programming |
-| Prepare for technical interviews |
+| Objectives |
+|-----------|
+| Understand Core C# fundamentals |
+| Learn .NET and CLR architecture |
+| Improve problem-solving and logical skills |
+| Apply C# concepts in real-world scenarios |
+| Practice clean and structured coding |
 
 ---
 
+## 📅 Day-Wise Practice Tracking
 
+| Day | Date | Focus Area | Key Activities |
+|----|------|-----------|---------------|
+| **Day 1** | Tuesday, December 16, 2025 | GitHub Foundations | 📚 Training kickoff session<br>💡 GitHub fundamentals<br>🔧 Repository & branch setup<br>✅ Solved 2 introductory Java programs |
+| **Day 2** | Wednesday, December 17, 2025 | Advanced GitHub Techniques | 🔍 Advanced GitHub workflows<br>📖 Branching & version control<br>💻 Solved foundational programming problems |
+| **Day 3** | Thursday, December 18, 2025 | Introduction to .NET & C# | ⚙️ Installed .NET & IDE setup<br>🏗️ Studied CLR, MSIL & JIT<br>📝 Learned C# syntax & variables<br>🎯 Solved 10 C# problems + 2 LeetCode |
+| **Day 4** | Friday, December 19, 2025 | CLR Architecture & Core C# | 💎 In-depth CLR understanding<br>🔐 Access modifiers<br>📊 Data types & naming conventions<br>➕ Operators<br>🏆 Completed Level 1 & 2 assignments + 2 LeetCode |
 
-📅 Day-Wise Practice Tracking
+---
 
-Day 1: GitHub Foundations 📚
-Date: Tuesday, December 16, 2025
+## 🛠️ Tools & Technologies
 
-Focus Area: Repository Management Basics
+| Tool | Purpose |
+|----|--------|
+| C# | Programming Language |
+| .NET | Application Framework |
+| Visual Studio / VS Code | Development Environment |
+| Git & GitHub | Version Control |
 
-🎯 Participated in the training kickoff session
+---
 
-💡 Explored GitHub fundamentals and core concepts
+## 👤 Author Details
 
-🔧 Set up a repository with multiple branches
+| Name | Program |
+|----|--------|
+| **Priyanshu Chauhan** | BridgeLabz Training |
 
-✅ Completed two introductory Java programming challenges
+---
 
+## 📌 Note
 
-
-
-Day 2: Advanced GitHub Techniques 🔍
-Date: Wednesday, December 17, 2025
-
-Focus Area: GitHub Deep Dive
-
-📖 Studied advanced GitHub features and workflows
-
-💻 Tackled foundational programming problems
-
-
-
-
-Day 3: Introduction to .NET and C# 🎨
-Date: Thursday, December 18, 2025
-
-Focus Area: C# Development Environment
-
-⚙️ Installed .NET framework and configured the IDE
-
-🏗️ Studied CLR architecture, including MSIL and JIT compilation
-
-📝 Learned C# syntax fundamentals and variable declarations
-
-🎯 Solved 10 beginner-level C# problems plus 2 LeetCode challenges
-
-
-
-
-Day 4: CLR Architecture and C# Core Concepts 💎
-Date: Friday, December 19, 2025
-
-Focus Area: C# Language Features
-
-🧠 Gained comprehensive understanding of .NET CLR architecture
-
-🔐 Explored access modifiers and their applications
-
-📊 Covered data types, variables, and naming conventions
-
-➕ Studied operators and their usage patterns
-
-🏆 Completed two assignments (Level 1 and Level 2) and solved 2 LeetCode problems
-
-
-
-
-
-
-
-
-## 👤 Maintained by
-
-| Name |
-|------|
-| Priyanshu Chauhan |
-
-
-
+| |
+|--|
+| This repository is maintained as part of BridgeLabz training for learning, practice, and assessment purposes. |
