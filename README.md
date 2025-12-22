@@ -48,6 +48,8 @@
 | **Day 3** | Thursday, December 18, 2025 | Introduction to .NET & C# | ⚙️ Installed .NET & IDE setup<br>🏗️ Studied CLR, MSIL & JIT<br>📝 Learned C# syntax & variables<br>🎯 Solved 10 C# problems + 2 LeetCode |
 | **Day 4** | Friday, December 19, 2025 | CLR Architecture & Core C# | 💎 In-depth CLR understanding<br>📊 Data types & naming conventions<br>➕ Operators<br>🏆 Completed Level 1 assignments + 2 LeetCode |
 | **Day 5** | Saturday, December 20, 2025 | C# Assignments & Problem Solving | 🧠 Strengthened understanding of C# concepts through practice<br>🔐 Access modifiers<br>🏆 Completed Level 2 assignments<br>🎯 Solved 2 LeetCode problems |
+| **Day 6** | Monday, December 22, 2025 | Control Flow & Visual Studio | 🔁 Studied control flow statements (if-else, switch, loops)<br>🏗️ Learned how to use Visual Studio for C# development<br>🏆 Completed Level 1, Level 2 & Level 3 assignments on control flow<br>🎯 Solved 2 LeetCode problems |
+
 
 
 ---
@@ -76,6 +78,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz training for learning, practice, and assessment purposes. |
+
 
 
 
