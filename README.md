@@ -49,7 +49,7 @@
 | **Day 4** | Friday, December 19, 2025 | CLR Architecture & Core C# | 💎 In-depth CLR understanding<br>📊 Data types & naming conventions<br>➕ Operators<br>🏆 Completed Level 1 assignments + 2 LeetCode |
 | **Day 5** | Saturday, December 20, 2025 | C# Assignments & Problem Solving | 🧠 Strengthened understanding of C# concepts through practice<br>🔐 Access modifiers<br>🏆 Completed Level 2 assignments<br>🎯 Solved 2 LeetCode problems |
 | **Day 6** | Monday, December 22, 2025 | Control Flow & Visual Studio | 🔁 Studied control flow statements (if-else, switch, loops)<br>🏗️ Learned how to use Visual Studio for C# development<br>🏆 Completed Level 1 & Level 2 assignments on control flow<br>🎯 Solved 2 LeetCode problems |
-| **Day 7** | Tuesday, December 23, 2025 | Control Flow & Arrays | 🔁 Completed Control Flow Level 3 assignments<br>📘 Studied array fundamentals including declaration, initialization, indexing, traversal, and common operations<br>🏆 Completed Level 1 array assignments + 🎯2 LeetCode |
+| **Day 7** | Tuesday, December 23, 2025 | Control Flow & Arrays | 🔁 Completed Control Flow Level 3 assignments<br>📘 Studied array fundamentals including declaration, initialization, indexing, traversal, and common operations<br>🏆 Completed Level 1 array assignments<br> 🎯 Solved 2 LeetCode Questions |
 
 
 
@@ -80,6 +80,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz's Capgemini training program for learning, practice, and assessment purposes. |
+
 
 
 
