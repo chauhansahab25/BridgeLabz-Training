@@ -79,7 +79,8 @@
 
 | |
 |--|
-| This repository is maintained as part of BridgeLabz's Capgemini training program for learning, practice, and assessment purposes. |
+| This repository is maintained as part of BridgeLabz's training program for learning, practice, and assessment purposes. |
+
 
 
 
