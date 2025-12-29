@@ -38,8 +38,8 @@ namespace CG_Practice.scenario-based
                 player[i] = Console.ReadLine();
                 pos[i] = 0;
             }
-            int[] s = { 4, 9, 17, 20, 28, 40, 51, 54, 62, 64, 71, 87, 93, 95, 99 };
-            int[] e = { 14, 31, 7, 38, 84, 59, 67, 34, 19, 60, 91, 24, 73, 75, 78 };
+            int[] s = { 6, 23, 20, 20, 28, 40, 51, 54, 62, 64, 71, 87, 93, 95, 99 };
+            int[] e = { 10, 34, 7, 36, 84, 59, 67, 34, 19, 60, 91, 24, 73, 75, 78 };
             bool gameover = false;
             while (!gameover)
             {
@@ -50,7 +50,7 @@ namespace CG_Practice.scenario-based
                     {
                         extra = false;
                         Console.WriteLine();
-                        Console.WriteLine(player[i] + "turn  to roll the dice");
+                        Console.WriteLine("Now " + player[i] + "turn to roll the dice");
                         Console.WriteLine("press enter to roll a dice");
                         Console.ReadLine();
                         int dice = new Random().Next(1, 7);
@@ -59,7 +59,7 @@ namespace CG_Practice.scenario-based
                         Console.WriteLine("Dice rolled" + dice);
                         if (newpos > 100)
                         {
-                            Console.WriteLine("your chance is skipped cause u roll more than 100");
+                            Console.WriteLine("your chance is skipped cause you rolled more than 100");
 
                         }
                         else
@@ -69,7 +69,7 @@ namespace CG_Practice.scenario-based
                             pos[i] = Apply(pos[i], s, e);
                             if (before < pos[i])
                             {
-                                Console.WriteLine("yooo u climb the ladder nice!!");
+                                Console.WriteLine("You climbed the ladder nice!!");
                             }
                             else if (before > pos[i])
                             {
@@ -78,7 +78,7 @@ namespace CG_Practice.scenario-based
                             Console.WriteLine("old position" + oldpos + "->" + pos[i]);
                             if (pos[i] == 100)
                             {
-                                Console.WriteLine("cong... " + player[i] + " Wins");
+                                Console.WriteLine("congratulation ! " + player[i] + " Wins");
                                 gameover = true;
                                 break;
                             }
@@ -86,7 +86,7 @@ namespace CG_Practice.scenario-based
                         }
                         if (dice == 6 && !gameover)
                         {
-                            Console.WriteLine("Yoo you get an extra chance for rolling 6");
+                            Console.WriteLine("Wow you get an extra chance for rolling 6");
                             extra = true;
                         }
                     }
