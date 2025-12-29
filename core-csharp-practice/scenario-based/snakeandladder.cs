@@ -73,7 +73,7 @@ namespace CG_Practice.scenario-based
                             }
                             else if (before > pos[i])
                             {
-                                Console.WriteLine("Brooooo snake bite's u ");
+                                Console.WriteLine("You are bitten by snake");
                             }
                             Console.WriteLine("old position" + oldpos + "->" + pos[i]);
                             if (pos[i] == 100)
@@ -88,9 +88,6 @@ namespace CG_Practice.scenario-based
                         {
                             Console.WriteLine("Yoo you get an extra chance for rolling 6");
                             extra = true;
-
-
-
                         }
                     }
                     if (gameover)
