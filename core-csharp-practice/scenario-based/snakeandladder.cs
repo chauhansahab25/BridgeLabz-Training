@@ -54,8 +54,8 @@ namespace CG_Practice.scenario-based
                         Console.WriteLine("press enter to roll a dice");
                         Console.ReadLine();
                         int dice = new Random().Next(1, 7);
-                        int oldpos = pos[i];
-                        int newpos = oldpos + dice;
+                        int oldposition = pos[i];
+                        int newposition = oldpos + dice;
                         Console.WriteLine("Dice rolled" + dice);
                         if (newpos > 100)
                         {
@@ -64,7 +64,7 @@ namespace CG_Practice.scenario-based
                         }
                         else
                         {
-                            pos[i] = newpos;
+                            pos[i] = newposition;
                             int before = pos[i];
                             pos[i] = Apply(pos[i], s, e);
                             if (before < pos[i])
@@ -75,7 +75,7 @@ namespace CG_Practice.scenario-based
                             {
                                 Console.WriteLine("You are bitten by snake");
                             }
-                            Console.WriteLine("old position" + oldpos + "->" + pos[i]);
+                            Console.WriteLine("old position" + oldposition + "->" + pos[i]);
                             if (pos[i] == 100)
                             {
                                 Console.WriteLine("congratulation ! " + player[i] + " Wins");
