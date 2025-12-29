@@ -55,7 +55,7 @@ namespace CG_Practice.scenario-based
                         Console.ReadLine();
                         int dice = new Random().Next(1, 7);
                         int oldposition = pos[i];
-                        int newposition = oldpos + dice;
+                        int newposition = oldposition + dice;
                         Console.WriteLine("Dice rolled" + dice);
                         if (newpos > 100)
                         {
