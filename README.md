@@ -52,6 +52,8 @@
 | **Day 7** | Tuesday, December 23, 2025 | Control Flow & Arrays | 🔁 Completed Control Flow Level 3 assignments<br>📘 Studied array fundamentals including declaration, initialization, indexing, traversal, and common operations<br>🏆 Completed Level 1 array assignments<br> 🎯 Solved 2 LeetCode Questions |
 | **Day 8** | Wednesday, December 24, 2025 | C# Methods & Reusability | 🧩 Studied C# methods and their role in structuring programs<br>🧠 Learned method components: method name, parameters, return type, and method body<br>🔁 Understood method calls, execution flow, and reusability<br>🔂 Learned user-defined methods, recursive methods, and static methods<br>📚 Explored standard library methods (System, Math, Random)<br>✅ Followed best programming practices for writing modular and reusable methods<br>🏆 Completed Methods Level 1 & Level 2 assignments<br>🎯 Solved 2 LeetCode problems |
 | **Day 9** | Friday, December 26, 2025 | C# Strings & Exception Handling | 🧵 Studied C# strings, string creation, and escape sequences<br>⌨️ Practiced taking string input and working with string arrays<br>📚 Explored String class built-in methods<br>⚠️ Learned C# exception handling concepts, exception hierarchy, and exception types<br>🏆 Completed String Lab Level 1 & Level 2 problems |
+| **Day 10** | Monday, December 29, 2025 | Scenario-Based Problems & String Applications | 🎲 Implemented Snake and Ladder game as a scenario-based C# program<br>📝 Developed a Sentence Formatter to auto-correct poorly formatted text by fixing spacing, capitalizing sentences, and trimming extra spaces<br>🔍 Built a text analysis program to count words, identify the longest word, and replace words case-insensitively<br>✅ Applied best programming practices using methods, proper naming conventions, and clean code structure |
+
 
 
 
@@ -84,6 +86,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz's training program for learning, practice, and assessment purposes. |
+
 
 
 
