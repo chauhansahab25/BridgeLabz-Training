@@ -4,41 +4,35 @@ using System.Text;
 
 namespace CG_Practice.oopscsharp
 {
-    // employee class
     class Employee
     {
-        // static variables - shared by all employees
-        public static string CompanyName = "Tech Corp";
-        public static int totalEmployees = 0;
+        static string CompanyName = "tech corp";  // company name for all
+        static int totalEmployees = 0;
 
-        // readonly - cant change after assignment
-        public readonly int Id;
+        readonly int Id;  // id cant change
         
-        // regular variables
-        public string Name;
-        public string Designation;
+        string Name;
+        string Designation;
 
-        // constructor using this keyword
         public Employee(string Name, int Id, string Designation)
         {
-            this.Name = Name;                // this resolves ambiguity
-            this.Id = Id;                    // this resolves ambiguity
-            this.Designation = Designation;  // this resolves ambiguity
+            this.Name = Name;                // this keyword to resolve name conflict
+            this.Id = Id;                    
+            this.Designation = Designation;  
             totalEmployees++;
         }
 
-        // static method
-        public static void DisplayTotalEmployees()
+        static void DisplayTotalEmployees()
         {
-            Console.WriteLine("Total Employees: " + totalEmployees);
-            Console.WriteLine("Company: " + CompanyName);
+            Console.WriteLine("total emps: " + totalEmployees);
+            Console.WriteLine("company: " + CompanyName);
         }
 
-        public void showEmployee()
+        void showEmployee()
         {
-            Console.WriteLine("Name: " + Name);
-            Console.WriteLine("ID: " + Id);
-            Console.WriteLine("Designation: " + Designation);
+            Console.WriteLine("name: " + Name);
+            Console.WriteLine("id: " + Id);
+            Console.WriteLine("job: " + Designation);
             Console.WriteLine();
         }
     }
@@ -47,21 +41,17 @@ namespace CG_Practice.oopscsharp
     {
         static void Main()
         {
-            // create employees
-            Employee emp1 = new Employee("John", 101, "Developer");
-            Employee emp2 = new Employee("Alice", 102, "Manager");
+            Employee emp1 = new Employee("john", 101, "developer");
+            Employee emp2 = new Employee("alice", 102, "manager");
 
-            // using is operator to check type
             object obj = emp1;
-            if (obj is Employee)
+            if (obj is Employee)  // check type
             {
-                Console.WriteLine("Object is Employee - showing details:");
+                Console.WriteLine("its employee object:");
                 emp1.showEmployee();
             }
 
             emp2.showEmployee();
-
-            // call static method
             Employee.DisplayTotalEmployees();
 
             Console.ReadLine();

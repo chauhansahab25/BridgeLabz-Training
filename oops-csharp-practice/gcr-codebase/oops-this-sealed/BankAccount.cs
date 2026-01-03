@@ -4,41 +4,35 @@ using System.Text;
 
 namespace CG_Practice.oopscsharp
 {
-    // bank account class
     class BankAccount
     {
-        // static variable - shared by all accounts
-        public static string bankName = "ABC Bank";
-        public static int totalAccounts = 0;
+        static string bankName = "ABC Bank";  // same for all
+        static int totalAccounts = 0;
 
-        // readonly - cant change after assignment
-        public readonly string AccountNumber;
+        readonly string AccountNumber;  // cant change this
         
-        // regular variables
-        public string AccountHolderName;
-        public double balance;
+        string AccountHolderName;
+        double balance;
 
-        // constructor using this keyword
         public BankAccount(string AccountHolderName, string AccountNumber, double balance)
         {
-            this.AccountHolderName = AccountHolderName;  // this resolves ambiguity
-            this.AccountNumber = AccountNumber;          // this resolves ambiguity
+            this.AccountHolderName = AccountHolderName;  // using this cuz same name
+            this.AccountNumber = AccountNumber;
             this.balance = balance;
-            totalAccounts++;  // increment count
+            totalAccounts++;
         }
 
-        // static method
-        public static void GetTotalAccounts()
+        static void GetTotalAccounts()
         {
-            Console.WriteLine("Total Accounts: " + totalAccounts);
-            Console.WriteLine("Bank: " + bankName);
+            Console.WriteLine("Total accounts: " + totalAccounts);
+            Console.WriteLine("Bank name: " + bankName);
         }
 
-        public void showAccount()
+        void showAccount()
         {
-            Console.WriteLine("Account: " + AccountNumber);
-            Console.WriteLine("Holder: " + AccountHolderName);
-            Console.WriteLine("Balance: $" + balance);
+            Console.WriteLine("Acc no: " + AccountNumber);
+            Console.WriteLine("Name: " + AccountHolderName);
+            Console.WriteLine("Balance: " + balance);
             Console.WriteLine();
         }
     }
@@ -47,21 +41,17 @@ namespace CG_Practice.oopscsharp
     {
         static void Main()
         {
-            // create accounts
-            BankAccount acc1 = new BankAccount("John", "12345", 1000);
-            BankAccount acc2 = new BankAccount("Alice", "67890", 2000);
+            BankAccount acc1 = new BankAccount("john", "12345", 1000);
+            BankAccount acc2 = new BankAccount("alice", "67890", 2000);
 
-            // using is operator to check type
             object obj = acc1;
-            if (obj is BankAccount)
+            if (obj is BankAccount)  // check if its bankaccount type
             {
-                Console.WriteLine("Object is BankAccount - showing details:");
+                Console.WriteLine("yes its bankaccount:");
                 acc1.showAccount();
             }
 
             acc2.showAccount();
-
-            // call static method
             BankAccount.GetTotalAccounts();
 
             Console.ReadLine();

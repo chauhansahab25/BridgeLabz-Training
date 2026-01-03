@@ -4,41 +4,35 @@ using System.Text;
 
 namespace CG_Practice.oopscsharp
 {
-    // student class for university
     class Student
     {
-        // static variables - shared by all students
-        public static string UniversityName = "State University";
-        public static int totalStudents = 0;
+        static string UniversityName = "state university";  // same uni for all
+        static int totalStudents = 0;
 
-        // readonly - cant change after assignment
-        public readonly int RollNumber;
+        readonly int RollNumber;  // roll no cant change
         
-        // regular variables
-        public string Name;
-        public string Grade;
+        string Name;
+        string Grade;
 
-        // constructor using this keyword
         public Student(string Name, int RollNumber, string Grade)
         {
-            this.Name = Name;                // this resolves ambiguity
-            this.RollNumber = RollNumber;    // this resolves ambiguity
-            this.Grade = Grade;              // this resolves ambiguity
+            this.Name = Name;                // this to resolve name issue
+            this.RollNumber = RollNumber;    
+            this.Grade = Grade;              
             totalStudents++;
         }
 
-        // static method
-        public static void DisplayTotalStudents()
+        static void DisplayTotalStudents()
         {
-            Console.WriteLine("Total Students: " + totalStudents);
-            Console.WriteLine("University: " + UniversityName);
+            Console.WriteLine("total students: " + totalStudents);
+            Console.WriteLine("university: " + UniversityName);
         }
 
-        public void showStudent()
+        void showStudent()
         {
-            Console.WriteLine("Name: " + Name);
-            Console.WriteLine("Roll: " + RollNumber);
-            Console.WriteLine("Grade: " + Grade);
+            Console.WriteLine("student: " + Name);
+            Console.WriteLine("roll: " + RollNumber);
+            Console.WriteLine("grade: " + Grade);
             Console.WriteLine();
         }
     }
@@ -47,21 +41,17 @@ namespace CG_Practice.oopscsharp
     {
         static void Main()
         {
-            // create students
-            Student s1 = new Student("John", 101, "A");
-            Student s2 = new Student("Alice", 102, "B+");
+            Student s1 = new Student("john", 101, "A");
+            Student s2 = new Student("alice", 102, "B+");
 
-            // using is operator to check type
             object obj = s1;
-            if (obj is Student)
+            if (obj is Student)  // check if student type
             {
-                Console.WriteLine("Object is Student - showing details:");
+                Console.WriteLine("its student:");
                 s1.showStudent();
             }
 
             s2.showStudent();
-
-            // call static method
             Student.DisplayTotalStudents();
 
             Console.ReadLine();

@@ -4,44 +4,38 @@ using System.Text;
 
 namespace CG_Practice.oopscsharp
 {
-    // patient class for hospital
     class Patient
     {
-        // static variables - shared by all patients
-        public static string HospitalName = "City Hospital";
-        public static int totalPatients = 0;
+        static string HospitalName = "city hospital";  // hospital name for all
+        static int totalPatients = 0;
 
-        // readonly - cant change after assignment
-        public readonly int PatientID;
+        readonly int PatientID;  // patient id cant change
         
-        // regular variables
-        public string Name;
-        public int Age;
-        public string Ailment;
+        string Name;
+        int Age;
+        string Ailment;
 
-        // constructor using this keyword
         public Patient(string Name, int Age, string Ailment, int PatientID)
         {
-            this.Name = Name;            // this resolves ambiguity
-            this.Age = Age;              // this resolves ambiguity
-            this.Ailment = Ailment;      // this resolves ambiguity
-            this.PatientID = PatientID;  // this resolves ambiguity
+            this.Name = Name;            // this to resolve confusion
+            this.Age = Age;              
+            this.Ailment = Ailment;      
+            this.PatientID = PatientID;  
             totalPatients++;
         }
 
-        // static method
-        public static void GetTotalPatients()
+        static void GetTotalPatients()
         {
-            Console.WriteLine("Total Patients: " + totalPatients);
-            Console.WriteLine("Hospital: " + HospitalName);
+            Console.WriteLine("total patients: " + totalPatients);
+            Console.WriteLine("hospital: " + HospitalName);
         }
 
-        public void showPatient()
+        void showPatient()
         {
-            Console.WriteLine("Name: " + Name);
-            Console.WriteLine("ID: " + PatientID);
-            Console.WriteLine("Age: " + Age);
-            Console.WriteLine("Ailment: " + Ailment);
+            Console.WriteLine("patient: " + Name);
+            Console.WriteLine("id: " + PatientID);
+            Console.WriteLine("age: " + Age);
+            Console.WriteLine("problem: " + Ailment);
             Console.WriteLine();
         }
     }
@@ -50,21 +44,17 @@ namespace CG_Practice.oopscsharp
     {
         static void Main()
         {
-            // create patients
-            Patient p1 = new Patient("John", 35, "Fever", 1001);
-            Patient p2 = new Patient("Alice", 28, "Headache", 1002);
+            Patient p1 = new Patient("john", 35, "fever", 1001);
+            Patient p2 = new Patient("alice", 28, "headache", 1002);
 
-            // using is operator to check type
             object obj = p1;
-            if (obj is Patient)
+            if (obj is Patient)  // check if patient type
             {
-                Console.WriteLine("Object is Patient - showing details:");
+                Console.WriteLine("its patient:");
                 p1.showPatient();
             }
 
             p2.showPatient();
-
-            // call static method
             Patient.GetTotalPatients();
 
             Console.ReadLine();
