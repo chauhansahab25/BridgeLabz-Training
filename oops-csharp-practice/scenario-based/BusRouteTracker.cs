@@ -1,5 +1,7 @@
 using System;
 
+namespace CG_Practice.oopsscenario
+{
 class BusRouteTracker
 {
     static void Main()
@@ -41,4 +43,5 @@ class BusRouteTracker
         
         Console.ReadKey();
     }
+}
 }
