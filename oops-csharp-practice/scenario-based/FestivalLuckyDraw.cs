@@ -1,1 +1,62 @@
-using System;\n\nclass FestivalLuckyDraw\n{\n    static void Main()\n    {\n        Console.WriteLine(\"🎉 Welcome to Diwali Mela Lucky Draw! 🎉\");\n        Console.WriteLine(\"Draw a number and win exciting gifts!\");\n        Console.WriteLine(\"(Numbers divisible by both 3 and 5 win gifts)\\n\");\n        \n        while (true)  // keep running for multiple visitors\n        {\n            Console.Write(\"Enter your lucky number (or 0 to exit): \");\n            string input = Console.ReadLine();\n            \n            int number;\n            \n            // check if input is valid number\n            if (!int.TryParse(input, out number))\n            {\n                Console.WriteLine(\"Invalid input! Please enter a valid number.\");\n                continue;  // skip to next iteration\n            }\n            \n            if (number == 0)\n            {\n                Console.WriteLine(\"Thanks for visiting Diwali Mela! Happy Diwali! 🪔\");\n                break;  // exit program\n            }\n            \n            // check if number wins (divisible by both 3 and 5)\n            if (number % 3 == 0 && number % 5 == 0)\n            {\n                Console.WriteLine(\"🎁 CONGRATULATIONS! You won a gift! 🎁\");\n                Console.WriteLine(\"Your number \" + number + \" is divisible by both 3 and 5!\");\n            }\n            else\n            {\n                Console.WriteLine(\"Sorry, no gift this time. Try again!\");\n                \n                // give hint\n                if (number % 3 == 0)\n                    Console.WriteLine(\"(Your number is divisible by 3 but not 5)\");\n                else if (number % 5 == 0)\n                    Console.WriteLine(\"(Your number is divisible by 5 but not 3)\");\n                else\n                    Console.WriteLine(\"(Your number is not divisible by 3 or 5)\");\n            }\n            \n            Console.WriteLine();  // blank line for spacing\n        }\n        \n        Console.ReadLine();\n    }\n}
+using System;
+
+class FestivalLuckyDraw
+{
+    static void Main()
+    {
+        Console.WriteLine("Diwali Mela Lucky Draw!");
+        Console.WriteLine("Draw a number and win gifts!");
+        Console.WriteLine("Win if your number divides by both 3 and 5");
+        Console.WriteLine();
+        
+        while (true)  // keep running for visitors
+        {
+            Console.Write("Enter your number (0 to quit): ");
+            string input = Console.ReadLine();
+            
+            int num;
+            
+            // check if its a valid number
+            if (!int.TryParse(input, out num))
+            {
+                Console.WriteLine("That's not a number! Try again.");
+                continue;  // go back to start of loop
+            }
+            
+            if (num == 0)
+            {
+                Console.WriteLine("Thanks for playing! Happy Diwali!");
+                break;  // exit
+            }
+            
+            // check if wins - divisible by 3 AND 5
+            if (num % 3 == 0 && num % 5 == 0)
+            {
+                Console.WriteLine("YOU WON A GIFT!");
+                Console.WriteLine(num + " divides by both 3 and 5!");
+            }
+            else
+            {
+                Console.WriteLine("No gift this time, try again!");
+                
+                // give some hints
+                if (num % 3 == 0)
+                {
+                    Console.WriteLine("(divides by 3 but not 5)");
+                }
+                else if (num % 5 == 0)
+                {
+                    Console.WriteLine("(divides by 5 but not 3)");
+                }
+                else
+                {
+                    Console.WriteLine("(doesn't divide by 3 or 5)");
+                }
+            }
+            
+            Console.WriteLine();  // empty line
+        }
+        
+        Console.ReadKey();
+    }
+}
