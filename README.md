@@ -13,6 +13,7 @@
 | Practice Module | Core C# Practice |
 | Main Repository Link | https://github.com/chauhansahab25/BridgeLabz-Training |
 | Core C# Folder Link | https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice |
+| OOPS C# Folder Link | https://github.com/chauhansahab25/BridgeLabz-Training/tree/oops-csharp/oops-csharp-practice |
 
 ---
 
@@ -96,6 +97,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz's training program for learning, practice, and assessment purposes. |
+
 
 
 
