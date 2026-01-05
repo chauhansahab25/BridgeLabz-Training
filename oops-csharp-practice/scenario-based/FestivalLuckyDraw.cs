@@ -1,4 +1,6 @@
 using System;
+namespace CG_Practice.oopsscenario
+{
 
 class FestivalLuckyDraw
 {
@@ -59,4 +61,5 @@ class FestivalLuckyDraw
         
         Console.ReadKey();
     }
+}
 }
