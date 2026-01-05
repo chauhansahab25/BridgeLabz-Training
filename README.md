@@ -57,6 +57,8 @@
 | **Day 12** | Wednesday, December 31, 2025 | Methods |🏦 Designed Bank Account Manager using methods for deposit, withdraw, and balance check with overdraft protection<br>🧮 Implemented utility methods for factorial, prime check, GCD, and Fibonacci with edge case handling<br>🧾 Built Invoice Generator for freelancers using string parsing, methods, and classes to calculate total invoice amount |
 | **Day 13** | Thursday, January 1, 2026 | Arrays & Methods , Classes & Objects (OOP) |🧱 Studied core OOP concepts: Class vs Object, memory allocation, encapsulation, and reusability<br>🍽️ Developed Cafeteria Menu App using string arrays to store fixed menu items<br>📋 Displayed menu with index numbers for easy selection<br>🧩 Used methods like DisplayMenu() and GetItemByIndex() for modular and reusable co<br>🏆 Completed Class and Object Assignment |
 | **Day 14** | Friday, January 2, 2026 | Inheritance & Polymorphism | 🧬 Studied inheritance concepts including single-level, multilevel, and hierarchical inheritance<br>🔑 Learned key features of inheritance, access modifiers, constructor inheritance, and method overriding<br>🔁 Understood polymorphism in the context of inheritance<br>🚌 Implemented Bus Route Distance Tracker using loops, condition checks, and cumulative distance tracking<br>🎉 Built Festival Lucky Draw program using modulus operator, if-conditions, loops, and input validation<br>🏆 Done Inheritance Assignment |
+| **Day 15** | Saturday, January 3, 2026 | OOPs Revision & Scenario-Based Logic | 🔁 Revised complete OOP concepts including classes, objects, inheritance, polymorphism, methods, and access modifiers<br>🛒 Implemented Amazon Payment Gateway scenario using OOP principles<br>💳 Applied conditional logic to provide 20% discount for Amazon Prime members<br>✅ Ensured clean code structure, proper method usage, and real-world business logic implementation |
+
 
 
 
@@ -94,6 +96,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz's training program for learning, practice, and assessment purposes. |
+
 
 
 
