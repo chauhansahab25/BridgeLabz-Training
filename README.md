@@ -54,7 +54,9 @@
 | **Day 9** | Friday, December 26, 2025 | C# Strings & Exception Handling | 🧵 Studied C# strings, string creation, and escape sequences<br>⌨️ Practiced taking string input and working with string arrays<br>📚 Explored String class built-in methods<br>⚠️ Learned C# exception handling concepts, exception hierarchy, and exception types<br>🏆 Completed String Lab Level 1 & Level 2 problems |
 | **Day 10** | Monday, December 29, 2025 | Scenario-Based Problems & String Applications | 🎲 Implemented Snake and Ladder game as a scenario-based C# program<br>📝 Developed a Sentence Formatter to auto-correct poorly formatted text by fixing spacing, capitalizing sentences, and trimming extra spaces<br>🔍 Built a text analysis program to count words, identify the longest word, and replace words case-insensitively<br>✅ Applied best programming practices using methods, proper naming conventions, and clean code structure |
 | **Day 11** | Tuesday, December 30, 2025 | Scenario-Based Applications & Arrays | 🎓 Implemented EduQuiz – Student Quiz Grader using string arrays, case-insensitive comparison, score calculation, and pass/fail evaluation<br>📚 Developed Library Management System to search books by partial title and manage checkout status using arrays and methods<br>🌡️ Built Temperature Analyzer using 2D arrays to find hottest/coldest days and calculate daily averages<br>📊 Created student score analysis program to compute average, highest, lowest, and above-average scores with input validation |
-| **Day 12** | Wednesday, December 31, 2025 | Methods, Classes & Objects (OOP) | 🧱 Studied core OOP concepts: Class vs Object, memory allocation, encapsulation, and reusability<br>🏦 Designed Bank Account Manager using methods for deposit, withdraw, and balance check with overdraft protection<br>🧮 Implemented utility methods for factorial, prime check, GCD, and Fibonacci with edge case handling<br>🧾 Built Invoice Generator for freelancers using string parsing, methods, and classes to calculate total invoice amount<br>🏆 Completed Class and Object Assignment |
+| **Day 12** | Wednesday, December 31, 2025 | Methods |🏦 Designed Bank Account Manager using methods for deposit, withdraw, and balance check with overdraft protection<br>🧮 Implemented utility methods for factorial, prime check, GCD, and Fibonacci with edge case handling<br>🧾 Built Invoice Generator for freelancers using string parsing, methods, and classes to calculate total invoice amount |
+| **Day 13** | Thursday, January 1, 2026 | Arrays & Methods , Classes & Objects (OOP) |🧱 Studied core OOP concepts: Class vs Object, memory allocation, encapsulation, and reusability<br>🍽️ Developed Cafeteria Menu App using string arrays to store fixed menu items<br>📋 Displayed menu with index numbers for easy selection<br>🧩 Used methods like DisplayMenu() and GetItemByIndex() for modular and reusable co<br>🏆 Completed Class and Object Assignment |
+
 
 
 
@@ -90,6 +92,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz's training program for learning, practice, and assessment purposes. |
+
 
 
 
