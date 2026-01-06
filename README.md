@@ -12,6 +12,7 @@
 | Practice Module | Core C# Practice |
 | Main Repository Link | https://github.com/chauhansahab25/BridgeLabz-Training | | Core C# Folder Link | https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice | | OOPS C# Folder Link | https://github.com/chauhansahab25/BridgeLabz-Training/tree/oops-csharp/oops-csharp-practice |
 
+---
 
 ##📂 Repository Structure
 
@@ -29,7 +30,7 @@
 | gcr-codebase   | Guided Code Review based OOPS C# programs | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/oops-csharp/oops-csharp-practice/gcr-codebase)   |
 | scenario-based | Real-world OOPS-based C# programs         | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/oops-csharp/oops-csharp-practice/scenario-based) |
 
-
+---
 
 ## 🎯 Learning Objectives
 
@@ -100,6 +101,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz's training program for learning, practice, and assessment purposes. |
+
 
 
 
