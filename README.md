@@ -59,7 +59,7 @@
 | **Day 5** | Saturday, December 20, 2025  | C# Assignments & Problem Solving | 🧠 Strengthened understanding of C# concepts through practice<br>🔐 Access modifiers<br>🏆 Completed Level 2 assignments<br>🎯 Solved 2 LeetCode problems |
 ---
 
-✅ Week 2 (Day 6 – Day 8 | Dec 22 – Dec 24, 2025)
+✅ Week 2 (Day 6 – Day 9 | Dec 22 – Dec 26, 2025)
 | Day       | Date                         | Focus Area                   | Key Activities                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | --------- | ---------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Day 6** | Monday, December 22, 2025    | Control Flow & Visual Studio | 🔁 Studied control flow statements (if-else, switch, loops)<br>🏗️ Learned how to use Visual Studio for C# development<br>🏆 Completed Level 1 & Level 2 assignments on control flow<br>🎯 Solved 2 LeetCode problems                                                                                                                                                                                                                                                                                                                |
@@ -67,6 +67,8 @@
 | **Day 8** | Wednesday, December 24, 2025 | C# Methods & Reusability     | 🧩 Studied C# methods and their role in structuring programs<br>🧠 Learned method components: method name, parameters, return type, and method body<br>🔁 Understood method calls, execution flow, and reusability<br>🔂 Learned user-defined methods, recursive methods, and static methods<br>📚 Explored standard library methods (System, Math, Random)<br>✅ Followed best programming practices for writing modular and reusable methods<br>🏆 Completed Methods Level 1 & Level 2 assignments<br>🎯 Solved 2 LeetCode problems |
 
 | **Day 9** | Friday, December 26, 2025 | C# Strings | 🧵 Studied C# strings, string creation, and escape sequences<br>⌨️ Practiced taking string input and working with string arrays<br>📚 Explored String class built-in methods<br>🏆 Completed String Lab Level 1 & Level 2 problems |
+
+
 | **Day 10** | Monday, December 29, 2025 | Scenario-Based Problems & String Applications | 🎲 Implemented Snake and Ladder game as a scenario-based C# program<br>📝 Developed a Sentence Formatter to auto-correct poorly formatted text by fixing spacing, capitalizing sentences, and trimming extra spaces<br>🔍 Built a text analysis program to count words, identify the longest word, and replace words case-insensitively<br>✅ Applied best programming practices using methods, proper naming conventions, and clean code structure |
 | **Day 11** | Tuesday, December 30, 2025 | Scenario-Based Applications & Arrays | 🎓 Implemented EduQuiz – Student Quiz Grader using string arrays, case-insensitive comparison, score calculation, and pass/fail evaluation<br>📚 Developed Library Management System to search books by partial title and manage checkout status using arrays and methods<br>🌡️ Built Temperature Analyzer using 2D arrays to find hottest/coldest days and calculate daily averages<br>📊 Created student score analysis program to compute average, highest, lowest, and above-average scores with input validation |
 | **Day 12** | Wednesday, December 31, 2025 | Methods |🏦 Designed Bank Account Manager using methods for deposit, withdraw, and balance check with overdraft protection<br>🧮 Implemented utility methods for factorial, prime check, GCD, and Fibonacci with edge case handling<br>🧾 Built Invoice Generator for freelancers using string parsing, methods, and classes to calculate total invoice amount |
@@ -111,6 +113,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz's training program for learning, practice, and assessment purposes. |
+
 
 
 
