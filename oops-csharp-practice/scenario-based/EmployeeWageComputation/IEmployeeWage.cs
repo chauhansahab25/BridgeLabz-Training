@@ -9,5 +9,6 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
         void CheckAttendance();
         int CalculateDailyWage();
         int CalculateMonthlyWage();
+        void CalculateWageTillCondition();
     }
 }

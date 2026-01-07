@@ -8,7 +8,7 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
         public void ShowMenu()
         {
             Console.WriteLine("=== Employee Wage Menu ===");
-            Console.WriteLine("1. Add Employee & Calculate Monthly Wage");
+            Console.WriteLine("1. Add Employee & Calculate Wage Till Condition");
             Console.WriteLine("2. Exit");
             
             int choice = int.Parse(Console.ReadLine());

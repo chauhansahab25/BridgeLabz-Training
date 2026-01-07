@@ -9,6 +9,8 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
         public const int FullDayHour = 8;
         public const int PartTimeHour = 4;
         public const int WorkingDaysPerMonth = 20;
+        public const int MaxWorkingHours = 100;
+        public const int MaxWorkingDays = 20;
         
         // attendance types
         public const int IsAbsent = 0;
@@ -21,8 +23,11 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
         public int AttendanceType;
         public int DailyWage;
         public int MonthlyWage;
+        public int TotalWage;
         public int WorkHours;
+        public int TotalHours;
         public int TotalWorkingDays;
+        public int TotalDays;
 
         public EmployeeWage(string company)
         {
@@ -32,8 +37,11 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             AttendanceType = 0;
             DailyWage = 0;
             MonthlyWage = 0;
+            TotalWage = 0;
             WorkHours = 0;
+            TotalHours = 0;
             TotalWorkingDays = WorkingDaysPerMonth;
+            TotalDays = 0;
         }
 
         public void AddEmployee(string name, int id)
@@ -90,10 +98,32 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             return MonthlyWage;
         }
 
+        public void CalculateWageTillCondition()
+        {
+            TotalWage = 0;
+            TotalHours = 0;
+            TotalDays = 0;
+
+            Console.WriteLine("Calculating wage till condition for " + EmployeeName + "...");
+            
+            while (TotalHours < MaxWorkingHours && TotalDays < MaxWorkingDays)
+            {
+                TotalDays++;
+                Console.WriteLine("Day " + TotalDays + " - Select attendance (0-Absent, 1-Part Time, 2-Full Time):");
+                AttendanceType = int.Parse(Console.ReadLine());
+                
+                CalculateDailyWage();
+                TotalHours += WorkHours;
+                TotalWage += DailyWage;
+                
+                Console.WriteLine("Day " + TotalDays + ": Hours=" + WorkHours + ", Wage=$" + DailyWage);
+            }
+        }
+
         public override string ToString()
         {
             string status = AttendanceType == IsPartTime ? "Part Time" : AttendanceType == IsFullTime ? "Full Time" : "Absent";
-            return "Company: " + CompanyName + " | Employee: " + EmployeeName + " (ID: " + EmployeeId + ") | Status: " + status + " | Work Hours: " + WorkHours + " | Daily Wage: $" + DailyWage + " | Monthly Wage: $" + MonthlyWage + " | Working Days: " + TotalWorkingDays;
+            return "Company: " + CompanyName + " | Employee: " + EmployeeName + " (ID: " + EmployeeId + ") | Status: " + status + " | Work Hours: " + WorkHours + " | Daily Wage: $" + DailyWage + " | Monthly Wage: $" + MonthlyWage + " | Total Days: " + TotalDays + " | Total Hours: " + TotalHours + " | Total Wage: $" + TotalWage;
         }
     }
 }

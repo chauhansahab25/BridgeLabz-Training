@@ -15,11 +15,7 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             int id = int.Parse(Console.ReadLine());
             
             emp.AddEmployee(name, id);
-            emp.CheckAttendance();
-            emp.CalculateDailyWage();
-            
-            int monthlyWage = emp.CalculateMonthlyWage();
-            Console.WriteLine("Monthly Wage: $" + monthlyWage);
+            emp.CalculateWageTillCondition();
             Console.WriteLine(emp.ToString());
         }
     }
