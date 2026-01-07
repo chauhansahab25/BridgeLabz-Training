@@ -7,6 +7,7 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
     {
         public const int WagePerHour = 20;
         public const int FullDayHour = 8;
+        public const int PartTimeHour = 4; // uc3 function
 
         static void Main()
         {
@@ -25,11 +26,15 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
         public void CheckAttendance()
         {
             Random rand = new Random();
-            int attendance = rand.Next(0, 2); // 0 or 1
+            int attendance = rand.Next(0, 3); // uc3 function - 0, 1, or 2
 
             if (attendance == 1)
             {
-                Console.WriteLine("Employee is Present");
+                Console.WriteLine("Employee is Part Time"); // uc3 function
+            }
+            else if (attendance == 2)
+            {
+                Console.WriteLine("Employee is Full Time"); // uc3 function
             }
             else
             {
@@ -41,13 +46,17 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
         public int CalculateDailyWage()
         {
             Random rand = new Random();
-            int attendance = rand.Next(0, 2);
+            int attendance = rand.Next(0, 3); // uc3 function
 
-            if (attendance == 1)
+            if (attendance == 1) // uc3 function - part time
+            {
+                return WagePerHour * PartTimeHour;
+            }
+            else if (attendance == 2) // uc3 function - full time
             {
                 return WagePerHour * FullDayHour;
             }
-            return 0;
+            return 0; // absent
         }
     }
 }
