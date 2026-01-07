@@ -76,6 +76,13 @@
 | **Day 13** | Thursday, January 1, 2026    | Arrays, Methods & OOP Basics | 🧱 Studied core OOP concepts: Class vs Object, encapsulation, memory allocation, and reusability<br>🍽️ Developed Cafeteria Menu App using string arrays and methods<br>🏆 Completed Class and Object assignments|
 | **Day 14** | Friday, January 2, 2026 | Inheritance & Polymorphism | 🧬 Studied inheritance types: single-level, multilevel, and hierarchical inheritance<br>🔑 Learned access modifiers, constructor inheritance, and method overriding<br>🔁 Understood polymorphism in inheritance<br>🛒 Implemented Amazon Payment Gateway scenario with 20% discount for Prime members<br>🏆 Completed Inheritance assignment |
 | **Day 15** | Saturday, January 3, 2026 | OOP Revision & Scenario-Based Logic | 🔁 Revised complete OOP concepts including classes, objects, inheritance, polymorphism, methods, and access modifiers<br>🚌 Implemented Bus Route Distance Tracker using loops and cumulative distance tracking<br>🎉 Built Festival Lucky Draw program using modulus operator, condition checks, loops, and input validation|
+---
+✅ Week 4 (Day 16 | January 5, 2026)
+| Day        | Date                    | Focus Area                                                           | Key Activities                                                                                                                                                                                                                                                                                                                                                                                                     
+| ---------- | ----------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Day 16** | Monday, January 5, 2026 | Advanced OOP – Encapsulation, Polymorphism, Interfaces & Abstraction | 📘 Practiced for Polymorphism, Interfaces, and Abstract Classes<br>🏥 Developed **Hospital Patient Management System** using OOP concepts (Patient, Doctor, Bill)<br>🔐 Applied **Encapsulation** using private fields, public properties, validation logic, and readonly members<br>🧬 Implemented **Inheritance** (InPatient, OutPatient) and **Polymorphism** using overridden DisplayInfo()<br>💳 Used **Interface**  for billing abstraction<br>🚗 Built **Vehicle Rental Application** using inheritance (Bike, Car, Truck) and interface **IRentable** with CalculateRent()|
+| **Day 17** | Tuesday, January 6, 2026 | OOP Design, Interfaces & Polymorphism | 📞 Developed **Customer Service Call Log Manager** using arrays and methods<br>🗂️ Stored call logs with PhoneNumber, Message, and Timestamp<br>🦜 Designed **Bird Sanctuary System** using inheritance and polymorphism<br>🔁 Applied polymorphism by iterating arrays and invoking behavior via interfaces<br>🔐 Completed remaining **Encapsulation assignments** with proper access control and validation |
+
 
 
 
@@ -115,6 +122,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz's training program for learning, practice, and assessment purposes. |
+
 
 
 
