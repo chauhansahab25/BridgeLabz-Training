@@ -6,5 +6,6 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
     interface IEmployeeWage
     {
         void CheckAttendance();
+        int CalculateDailyWage(); // uc2 function
     }
 }
