@@ -8,6 +8,10 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
         public const int WagePerHour = 20;
         public const int FullDayHour = 8;
         public const int PartTimeHour = 4; // uc3 function
+        // uc4 function - constants for switch case
+        public const int IsAbsent = 0;
+        public const int IsPartTime = 1;
+        public const int IsFullTime = 2;
 
         static void Main()
         {
@@ -28,17 +32,18 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             Random rand = new Random();
             int attendance = rand.Next(0, 3); // uc3 function - 0, 1, or 2
 
-            if (attendance == 1)
+            // uc4 function - switch case
+            switch (attendance)
             {
-                Console.WriteLine("Employee is Part Time"); // uc3 function
-            }
-            else if (attendance == 2)
-            {
-                Console.WriteLine("Employee is Full Time"); // uc3 function
-            }
-            else
-            {
-                Console.WriteLine("Employee is Absent");
+                case IsPartTime:
+                    Console.WriteLine("Employee is Part Time");
+                    break;
+                case IsFullTime:
+                    Console.WriteLine("Employee is Full Time");
+                    break;
+                case IsAbsent:
+                    Console.WriteLine("Employee is Absent");
+                    break;
             }
         }
 
@@ -48,15 +53,18 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             Random rand = new Random();
             int attendance = rand.Next(0, 3); // uc3 function
 
-            if (attendance == 1) // uc3 function - part time
+            // uc4 function - switch case
+            switch (attendance)
             {
-                return WagePerHour * PartTimeHour;
+                case IsPartTime:
+                    return WagePerHour * PartTimeHour;
+                case IsFullTime:
+                    return WagePerHour * FullDayHour;
+                case IsAbsent:
+                    return 0;
+                default:
+                    return 0;
             }
-            else if (attendance == 2) // uc3 function - full time
-            {
-                return WagePerHour * FullDayHour;
-            }
-            return 0; // absent
         }
     }
 }
