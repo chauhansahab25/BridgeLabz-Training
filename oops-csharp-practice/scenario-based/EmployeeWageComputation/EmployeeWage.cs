@@ -8,6 +8,7 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
         public const int WagePerHour = 20;
         public const int FullDayHour = 8;
         public const int PartTimeHour = 4; // uc3 function
+        public const int WorkingDaysPerMonth = 20; // uc5 function
         // uc4 function - constants for switch case
         public const int IsAbsent = 0;
         public const int IsPartTime = 1;
@@ -19,10 +20,9 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             Console.WriteLine();
 
             EmployeeWage emp = new EmployeeWage();
-            emp.CheckAttendance();
             
-            int dailyWage = emp.CalculateDailyWage(); // uc2 function
-            Console.WriteLine("Daily Wage: $" + dailyWage);
+            int monthlyWage = emp.CalculateMonthlyWage(); // uc5 function
+            Console.WriteLine("Monthly Wage: $" + monthlyWage);
 
             Console.ReadKey();
         }
@@ -65,6 +65,17 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
                 default:
                     return 0;
             }
+        }
+
+        // uc5 function
+        public int CalculateMonthlyWage()
+        {
+            int totalWage = 0;
+            for (int day = 1; day <= WorkingDaysPerMonth; day++)
+            {
+                totalWage += CalculateDailyWage();
+            }
+            return totalWage;
         }
     }
 }

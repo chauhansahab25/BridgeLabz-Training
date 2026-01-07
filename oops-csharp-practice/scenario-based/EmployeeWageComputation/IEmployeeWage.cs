@@ -7,5 +7,6 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
     {
         void CheckAttendance();
         int CalculateDailyWage(); // uc2 function
+        int CalculateMonthlyWage(); // uc5 function
     }
 }
