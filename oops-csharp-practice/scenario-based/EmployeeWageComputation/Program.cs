@@ -6,7 +6,7 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
     {
         static void Main()
         {
-            Console.WriteLine("Welcome to Employee Wage Computation Program on Master Branch - UC4");
+            Console.WriteLine("Welcome to Employee Wage Computation Program on Master Branch");
             Console.WriteLine();
 
             EmployeeWageMenu menu = new EmployeeWageMenu();

@@ -2,7 +2,7 @@ using System;
 
 namespace CG_Practice.oopsscenario.EmployeeWageComputation
 {
-    // utility implementation class - UC4
+    // utility class
     class EmployeeUtilityImpl
     {
         public void ProcessEmployeeWage()
@@ -16,9 +16,10 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             
             emp.AddEmployee(name, id);
             emp.CheckAttendance();
+            emp.CalculateDailyWage();
             
-            int dailyWage = emp.CalculateDailyWage(); // uc2 function
-            Console.WriteLine("Daily Wage: $" + dailyWage);
+            int monthlyWage = emp.CalculateMonthlyWage();
+            Console.WriteLine("Monthly Wage: $" + monthlyWage);
             Console.WriteLine(emp.ToString());
         }
     }

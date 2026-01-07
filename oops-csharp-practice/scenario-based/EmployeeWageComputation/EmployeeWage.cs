@@ -2,14 +2,15 @@ using System;
 
 namespace CG_Practice.oopsscenario.EmployeeWageComputation
 {
-    // employee wage class - UC4
+    // employee wage class
     class EmployeeWage : IEmployeeWage
     {
         public const int WagePerHour = 20;
         public const int FullDayHour = 8;
-        public const int PartTimeHour = 4; // uc3 function
+        public const int PartTimeHour = 4;
+        public const int WorkingDaysPerMonth = 20;
         
-        // uc4 function - constants for switch case
+        // attendance types
         public const int IsAbsent = 0;
         public const int IsPartTime = 1;
         public const int IsFullTime = 2;
@@ -19,7 +20,9 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
         public int EmployeeId;
         public int AttendanceType;
         public int DailyWage;
+        public int MonthlyWage;
         public int WorkHours;
+        public int TotalWorkingDays;
 
         public EmployeeWage(string company)
         {
@@ -28,7 +31,9 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             EmployeeId = 0;
             AttendanceType = 0;
             DailyWage = 0;
+            MonthlyWage = 0;
             WorkHours = 0;
+            TotalWorkingDays = WorkingDaysPerMonth;
         }
 
         public void AddEmployee(string name, int id)
@@ -44,14 +49,13 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             Console.WriteLine("0 - Absent, 1 - Part Time, 2 - Full Time");
             AttendanceType = int.Parse(Console.ReadLine());
 
-            // uc4 function - switch case
             switch (AttendanceType)
             {
                 case IsPartTime:
-                    Console.WriteLine("Employee is Part Time"); // uc3 function
+                    Console.WriteLine("Employee is Part Time");
                     break;
                 case IsFullTime:
-                    Console.WriteLine("Employee is Full Time"); // uc3 function
+                    Console.WriteLine("Employee is Full Time");
                     break;
                 case IsAbsent:
                     Console.WriteLine("Employee is Absent");
@@ -59,15 +63,13 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             }
         }
 
-        // uc2 function
         public int CalculateDailyWage()
         {
-            // uc4 function - switch case
             switch (AttendanceType)
             {
                 case IsPartTime:
                     WorkHours = PartTimeHour;
-                    DailyWage = WagePerHour * PartTimeHour; // uc3 function
+                    DailyWage = WagePerHour * PartTimeHour;
                     return DailyWage;
                 case IsFullTime:
                     WorkHours = FullDayHour;
@@ -82,10 +84,16 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             }
         }
 
+        public int CalculateMonthlyWage()
+        {
+            MonthlyWage = DailyWage * TotalWorkingDays;
+            return MonthlyWage;
+        }
+
         public override string ToString()
         {
             string status = AttendanceType == IsPartTime ? "Part Time" : AttendanceType == IsFullTime ? "Full Time" : "Absent";
-            return "Company: " + CompanyName + " | Employee: " + EmployeeName + " (ID: " + EmployeeId + ") | Status: " + status + " | Work Hours: " + WorkHours + " | Daily Wage: $" + DailyWage;
+            return "Company: " + CompanyName + " | Employee: " + EmployeeName + " (ID: " + EmployeeId + ") | Status: " + status + " | Work Hours: " + WorkHours + " | Daily Wage: $" + DailyWage + " | Monthly Wage: $" + MonthlyWage + " | Working Days: " + TotalWorkingDays;
         }
     }
 }
