@@ -2,7 +2,7 @@ using System;
 
 namespace CG_Practice.oopsscenario.EmployeeWageComputation
 {
-    // utility implementation class - UC3
+    // utility implementation class - UC4
     class EmployeeUtilityImpl
     {
         public void ProcessEmployeeWage()

@@ -2,12 +2,17 @@ using System;
 
 namespace CG_Practice.oopsscenario.EmployeeWageComputation
 {
-    // employee wage class - UC3
+    // employee wage class - UC4
     class EmployeeWage : IEmployeeWage
     {
         public const int WagePerHour = 20;
         public const int FullDayHour = 8;
         public const int PartTimeHour = 4; // uc3 function
+        
+        // uc4 function - constants for switch case
+        public const int IsAbsent = 0;
+        public const int IsPartTime = 1;
+        public const int IsFullTime = 2;
         
         public string CompanyName;
         public string EmployeeName;
@@ -39,43 +44,47 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             Console.WriteLine("0 - Absent, 1 - Part Time, 2 - Full Time");
             AttendanceType = int.Parse(Console.ReadLine());
 
-            if (AttendanceType == 1)
+            // uc4 function - switch case
+            switch (AttendanceType)
             {
-                Console.WriteLine("Employee is Part Time"); // uc3 function
-            }
-            else if (AttendanceType == 2)
-            {
-                Console.WriteLine("Employee is Full Time"); // uc3 function
-            }
-            else
-            {
-                Console.WriteLine("Employee is Absent");
+                case IsPartTime:
+                    Console.WriteLine("Employee is Part Time"); // uc3 function
+                    break;
+                case IsFullTime:
+                    Console.WriteLine("Employee is Full Time"); // uc3 function
+                    break;
+                case IsAbsent:
+                    Console.WriteLine("Employee is Absent");
+                    break;
             }
         }
 
         // uc2 function
         public int CalculateDailyWage()
         {
-            if (AttendanceType == 1) // uc3 function - part time
+            // uc4 function - switch case
+            switch (AttendanceType)
             {
-                WorkHours = PartTimeHour;
-                DailyWage = WagePerHour * PartTimeHour;
-                return DailyWage;
+                case IsPartTime:
+                    WorkHours = PartTimeHour;
+                    DailyWage = WagePerHour * PartTimeHour; // uc3 function
+                    return DailyWage;
+                case IsFullTime:
+                    WorkHours = FullDayHour;
+                    DailyWage = WagePerHour * FullDayHour;
+                    return DailyWage;
+                case IsAbsent:
+                    WorkHours = 0;
+                    DailyWage = 0;
+                    return 0;
+                default:
+                    return 0;
             }
-            else if (AttendanceType == 2) // uc3 function - full time
-            {
-                WorkHours = FullDayHour;
-                DailyWage = WagePerHour * FullDayHour;
-                return DailyWage;
-            }
-            WorkHours = 0;
-            DailyWage = 0;
-            return 0; // absent
         }
 
         public override string ToString()
         {
-            string status = AttendanceType == 1 ? "Part Time" : AttendanceType == 2 ? "Full Time" : "Absent";
+            string status = AttendanceType == IsPartTime ? "Part Time" : AttendanceType == IsFullTime ? "Full Time" : "Absent";
             return "Company: " + CompanyName + " | Employee: " + EmployeeName + " (ID: " + EmployeeId + ") | Status: " + status + " | Work Hours: " + WorkHours + " | Daily Wage: $" + DailyWage;
         }
     }
