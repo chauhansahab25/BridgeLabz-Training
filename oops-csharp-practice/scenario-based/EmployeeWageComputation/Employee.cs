@@ -2,11 +2,12 @@ using System;
 
 namespace CG_Practice.oopsscenario.EmployeeWageComputation
 {
-    // employee class 
+    // employee class with random attendance
     class Employee : IEmployee
     {
         public const int WagePerHour = 20;
         public const int FullDayHour = 8;
+        public const int PartTimeHour = 4;
         
         public string CompanyName;
         public string EmployeeName;
@@ -32,20 +33,20 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
 
         public void CheckAttendance()
         {
-            Console.Write("Is " + EmployeeName + " present? (1 for Yes, 0 for No): ");
-            IsPresent = int.Parse(Console.ReadLine());
-
+            Random random = new Random();
+            IsPresent = random.Next(0, 2); // Random 0 or 1
+            
             if (IsPresent == 1)
             {
-                Console.WriteLine("Employee is Present");
+                Console.WriteLine("Employee " + EmployeeName + " is Present (Random Check)");
             }
             else
             {
-                Console.WriteLine("Employee is Absent");
+                Console.WriteLine("Employee " + EmployeeName + " is Absent (Random Check)");
             }
         }
 
-        public int CalculateDailyWage()//uc2 func
+        public int CalculateDailyWage()
         {
             if (IsPresent == 1)
             {

@@ -2,24 +2,43 @@ using System;
 
 namespace CG_Practice.oopsscenario.EmployeeWageComputation
 {
-    // utility class
+    // utility class for employee operations
     class EmployeeUtilityImpl
     {
+        private Employee employee;
+
+        public EmployeeUtilityImpl()
+        {
+            employee = new Employee("BridgeLabz Solutions");
+        }
+
         public void ProcessEmployee()
         {
-            Employee emp = new Employee("TechCorp");
-            
-            Console.Write("Enter employee name: ");
+            Console.WriteLine("=== Employee Wage Computation UC3 - Random Attendance ===");
+            Console.WriteLine();
+
+            // get employee details from user
+            Console.Write("Enter Employee Name: ");
             string name = Console.ReadLine();
-            Console.Write("Enter employee ID: ");
+            
+            Console.Write("Enter Employee ID: ");
             int id = int.Parse(Console.ReadLine());
             
-            emp.AddEmployee(name, id);
-            emp.CheckAttendance();
-            
-            int dailyWage = emp.CalculateDailyWage();//uc2
-            Console.WriteLine("Daily Wage: $" + dailyWage);
-            Console.WriteLine(emp.ToString());
+            employee.AddEmployee(name, id);
+            Console.WriteLine();
+
+            // check random attendance
+            employee.CheckAttendance();
+            Console.WriteLine();
+
+            // calculate wage
+            int wage = employee.CalculateDailyWage();
+            Console.WriteLine("Daily wage calculated: $" + wage);
+            Console.WriteLine();
+
+            // show employee info
+            Console.WriteLine("Employee Details:");
+            Console.WriteLine(employee.ToString());
         }
     }
 }

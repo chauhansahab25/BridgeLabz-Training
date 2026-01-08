@@ -2,7 +2,7 @@ using System;
 
 namespace CG_Practice.oopsscenario.EmployeeWageComputation
 {
-    // employee interface - UC2
+    // interface for employee operations
     interface IEmployee
     {
         void AddEmployee(string name, int id);

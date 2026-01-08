@@ -6,7 +6,7 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
     {
         static void Main()
         {
-            Console.WriteLine("Welcome to Employee Wage Computation Program ");
+            Console.WriteLine("Welcome to Employee Wage Computation Program - UC3");
             Console.WriteLine();
 
             EmployeeMenu menu = new EmployeeMenu();
