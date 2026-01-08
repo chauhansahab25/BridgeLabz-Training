@@ -24,11 +24,25 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             DailyWage = 0;
         }
 
-        
-    
         public override string ToString()
         {
-            return "Company: " + CompanyName + " | Employee: " + EmployeeName + " (ID: " + EmployeeId + ") | Attendance: " + (IsPresent == 1 ? "Present" : "Absent") + " | Daily Wage: $" + DailyWage;
+            string status = "";
+            switch (IsPresent)
+            {
+                case 0:
+                    status = "Absent";
+                    break;
+                case 1:
+                    status = "Part Time";
+                    break;
+                case 2:
+                    status = "Full Time";
+                    break;
+                default:
+                    status = "Unknown";
+                    break;
+            }
+            return "Company: " + CompanyName + " | Employee: " + EmployeeName + " (ID: " + EmployeeId + ") | Status: " + status + " | Daily Wage: $" + DailyWage;
         }
     }
 }

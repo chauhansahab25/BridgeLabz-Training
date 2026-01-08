@@ -14,11 +14,25 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
 
         public void ShowMenu()
         {
-            Console.WriteLine("Employee Wage Computation - UC3");
-            Console.WriteLine("Random Attendance Check Feature");
+            Console.WriteLine("1. Add Employee");
+            Console.WriteLine("2. Exit");
+            Console.Write("Enter your choice: ");
+
+            int choice = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            utility.ProcessEmployee();
+            switch (choice)
+            {
+                case 1:
+                    utility.ProcessEmployee();
+                    break;
+                case 2:
+                    Console.WriteLine("Exiting program...");
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice!");
+                    break;
+            }
 
             Console.WriteLine();
             Console.WriteLine("Press any key to exit...");
