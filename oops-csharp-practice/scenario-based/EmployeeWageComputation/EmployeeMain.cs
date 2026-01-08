@@ -12,7 +12,7 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             EmployeeMenu menu = new EmployeeMenu();
             menu.ShowMenu();
 
-            Console.ReadKey();
+         
         }
     }
 }

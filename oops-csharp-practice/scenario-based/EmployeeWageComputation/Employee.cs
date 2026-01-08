@@ -3,19 +3,16 @@ using System;
 namespace CG_Practice.oopsscenario.EmployeeWageComputation
 {
     // employee class
-    class Employee 
+    class Employee : IEmployee
     {
-        public const int WagePerHour = 20;
-        public const int FullDayHour = 8;
-        public const int PartTimeHour = 4;
-        public const int WorkingDaysPerMonth = 20;
-
         public string CompanyName;
         public string EmployeeName;
         public int EmployeeId;
         public int IsPresent;
         public int DailyWage;
         public int MonthlyWage;
+        public int TotalWorkingHours;
+        public int TotalWorkingDays;
 
         public Employee(string company)
         {
@@ -25,8 +22,31 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             IsPresent = 0;
             DailyWage = 0;
             MonthlyWage = 0;
+            TotalWorkingHours = 0;
+            TotalWorkingDays = 0;
         }
 
+        public void AddEmployee(string name, int id)
+        {
+            // Implementation moved to EmployeeUtilityImpl
+        }
+
+        public void CheckAttendance()
+        {
+            // Implementation moved to EmployeeUtilityImpl
+        }
+
+        public int CalculateDailyWage()
+        {
+            // Implementation moved to EmployeeUtilityImpl
+            return DailyWage;
+        }
+
+        public int CalculateMonthlyWage()
+        {
+            // Implementation moved to EmployeeUtilityImpl
+            return MonthlyWage;
+        }
 
         public override string ToString()
         {
@@ -46,7 +66,7 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
                     status = "Unknown";
                     break;
             }
-            return "Company: " + CompanyName + " | Employee: " + EmployeeName + " (ID: " + EmployeeId + ") | Status: " + status + " | Daily Wage: $" + DailyWage + " | Monthly Wage: $" + MonthlyWage;
+            return "Company: " + CompanyName + " | Employee: " + EmployeeName + " (ID: " + EmployeeId + ") | Total Hours: " + TotalWorkingHours + " | Total Days: " + TotalWorkingDays + " | Monthly Wage: $" + MonthlyWage;
         }
     }
 }

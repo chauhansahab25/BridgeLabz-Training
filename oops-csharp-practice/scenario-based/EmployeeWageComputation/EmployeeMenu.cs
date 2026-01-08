@@ -7,14 +7,10 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
     {
         private EmployeeUtilityImpl utility;
 
-        public EmployeeMenu()
-        {
-            utility = new EmployeeUtilityImpl();
-        }
-
         public void ShowMenu()
         {
-            Console.WriteLine("1. Add Employee");
+            utility = new EmployeeUtilityImpl();
+            Console.WriteLine("1. Add Employee ");
             Console.WriteLine("2. Exit");
             Console.Write("Enter your choice: ");
 
