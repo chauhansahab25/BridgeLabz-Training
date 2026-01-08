@@ -77,11 +77,14 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             return employee.DailyWage;
         }
 
+        public int CalculateMonthlyWage()
+        {
+            employee.MonthlyWage = employee.DailyWage * Employee.WorkingDaysPerMonth;
+            return employee.MonthlyWage;
+        }
+
         public void ProcessEmployee()
         {
-            Console.WriteLine("=== Employee Wage Computation UC4===");
-            Console.WriteLine();
-
             // get employee details from user
             Console.Write("Enter Employee Name: ");
             string name = Console.ReadLine();
@@ -92,16 +95,20 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             AddEmployee(name, id);
             Console.WriteLine();
 
-
+            // check work type and attendance
             CheckAttendance();
             Console.WriteLine();
 
+            // calculate daily wage
+            int dailyWage = CalculateDailyWage();
+            Console.WriteLine("Daily wage calculated: $" + dailyWage);
 
-            int wage = CalculateDailyWage();
-            Console.WriteLine("Daily wage calculated: $" + wage);
+            // calculate monthly wage
+            int monthlyWage = CalculateMonthlyWage();
+            Console.WriteLine("Monthly wage (20 working days): $" + monthlyWage);
             Console.WriteLine();
 
-
+            // show employee info
             Console.WriteLine("Employee Details:");
             Console.WriteLine(employee.ToString());
         }

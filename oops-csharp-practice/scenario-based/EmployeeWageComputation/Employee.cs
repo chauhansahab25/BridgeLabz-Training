@@ -3,17 +3,19 @@ using System;
 namespace CG_Practice.oopsscenario.EmployeeWageComputation
 {
     // employee class
-    class Employee : IEmployee
+    class Employee 
     {
         public const int WagePerHour = 20;
         public const int FullDayHour = 8;
         public const int PartTimeHour = 4;
-        
+        public const int WorkingDaysPerMonth = 20;
+
         public string CompanyName;
         public string EmployeeName;
         public int EmployeeId;
         public int IsPresent;
         public int DailyWage;
+        public int MonthlyWage;
 
         public Employee(string company)
         {
@@ -22,7 +24,9 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             EmployeeId = 0;
             IsPresent = 0;
             DailyWage = 0;
+            MonthlyWage = 0;
         }
+
 
         public override string ToString()
         {
@@ -42,7 +46,7 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
                     status = "Unknown";
                     break;
             }
-            return "Company: " + CompanyName + " | Employee: " + EmployeeName + " (ID: " + EmployeeId + ") | Status: " + status + " | Daily Wage: $" + DailyWage;
+            return "Company: " + CompanyName + " | Employee: " + EmployeeName + " (ID: " + EmployeeId + ") | Status: " + status + " | Daily Wage: $" + DailyWage + " | Monthly Wage: $" + MonthlyWage;
         }
     }
 }
