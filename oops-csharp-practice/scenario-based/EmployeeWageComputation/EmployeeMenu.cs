@@ -2,13 +2,13 @@ using System;
 
 namespace CG_Practice.oopsscenario.EmployeeWageComputation
 {
-    // menu class - UC1
+    // menu class - UC2
     class EmployeeMenu
     {
         public void ShowMenu()
         {
-            Console.WriteLine("=== Employee Menu - UC1 ===");
-            Console.WriteLine("1. Add Employee & Check Attendance");
+            Console.WriteLine("=== Employee Menu - UC2 ===");
+            Console.WriteLine("1. Add Employee & Calculate Daily Wage");
             Console.WriteLine("2. Exit");
             
             int choice = int.Parse(Console.ReadLine());
