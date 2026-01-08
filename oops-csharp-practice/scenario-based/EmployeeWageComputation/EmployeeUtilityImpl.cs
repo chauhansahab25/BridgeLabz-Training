@@ -12,6 +12,39 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             employee = new Employee("BridgeLabz Solutions");
         }
 
+        public void AddEmployee(string name, int id)
+        {
+            employee.EmployeeName = name;
+            employee.EmployeeId = id;
+            Console.WriteLine("Employee added: " + name + " (ID: " + id + ")");
+        }
+
+        public void CheckAttendance()
+        {
+            Random random = new Random();
+            employee.IsPresent = random.Next(0, 2); // Random 0 or 1
+            
+            if (employee.IsPresent == 1)
+            {
+                Console.WriteLine("Employee " + employee.EmployeeName + " is Present (Random Check)");
+            }
+            else
+            {
+                Console.WriteLine("Employee " + employee.EmployeeName + " is Absent (Random Check)");
+            }
+        }
+
+        public int CalculateDailyWage()
+        {
+            if (employee.IsPresent == 1)
+            {
+                employee.DailyWage = Employee.WagePerHour * Employee.FullDayHour;
+                return employee.DailyWage;
+            }
+            employee.DailyWage = 0;
+            return 0;
+        }
+
         public void ProcessEmployee()
         {
             Console.WriteLine("=== Employee Wage Computation UC3 - Random Attendance ===");
@@ -24,15 +57,15 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             Console.Write("Enter Employee ID: ");
             int id = int.Parse(Console.ReadLine());
             
-            employee.AddEmployee(name, id);
+            AddEmployee(name, id);
             Console.WriteLine();
 
             // check random attendance
-            employee.CheckAttendance();
+            CheckAttendance();
             Console.WriteLine();
 
             // calculate wage
-            int wage = employee.CalculateDailyWage();
+            int wage = CalculateDailyWage();
             Console.WriteLine("Daily wage calculated: $" + wage);
             Console.WriteLine();
 

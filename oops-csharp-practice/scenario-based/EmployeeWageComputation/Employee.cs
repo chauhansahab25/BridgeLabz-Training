@@ -2,7 +2,7 @@ using System;
 
 namespace CG_Practice.oopsscenario.EmployeeWageComputation
 {
-    // employee class with random attendance
+    // employee class
     class Employee : IEmployee
     {
         public const int WagePerHour = 20;
@@ -24,39 +24,8 @@ namespace CG_Practice.oopsscenario.EmployeeWageComputation
             DailyWage = 0;
         }
 
-        public void AddEmployee(string name, int id)
-        {
-            EmployeeName = name;
-            EmployeeId = id;
-            Console.WriteLine("Employee added: " + name + " (ID: " + id + ")");
-        }
-
-        public void CheckAttendance()
-        {
-            Random random = new Random();
-            IsPresent = random.Next(0, 2); // Random 0 or 1
-            
-            if (IsPresent == 1)
-            {
-                Console.WriteLine("Employee " + EmployeeName + " is Present (Random Check)");
-            }
-            else
-            {
-                Console.WriteLine("Employee " + EmployeeName + " is Absent (Random Check)");
-            }
-        }
-
-        public int CalculateDailyWage()
-        {
-            if (IsPresent == 1)
-            {
-                DailyWage = WagePerHour * FullDayHour;
-                return DailyWage;
-            }
-            DailyWage = 0;
-            return 0;
-        }
-
+        
+    
         public override string ToString()
         {
             return "Company: " + CompanyName + " | Employee: " + EmployeeName + " (ID: " + EmployeeId + ") | Attendance: " + (IsPresent == 1 ? "Present" : "Absent") + " | Daily Wage: $" + DailyWage;
