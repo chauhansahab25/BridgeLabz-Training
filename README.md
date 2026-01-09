@@ -82,6 +82,8 @@
 | ---------- | ----------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Day 16** | Monday, January 5, 2026 | Advanced OOP – Encapsulation, Polymorphism, Interfaces & Abstraction | 📘 Practiced for Polymorphism, Interfaces, and Abstract Classes<br>🏥 Developed **Hospital Patient Management System** using OOP concepts (Patient, Doctor, Bill)<br>🔐 Applied **Encapsulation** using private fields, public properties, validation logic, and readonly members<br>🧬 Implemented **Inheritance** (InPatient, OutPatient) and **Polymorphism** using overridden DisplayInfo()<br>💳 Used **Interface**  for billing abstraction<br>🚗 Built **Vehicle Rental Application** using inheritance (Bike, Car, Truck) and interface **IRentable** with CalculateRent()|
 | **Day 17** | Tuesday, January 6, 2026 | OOP Design, Interfaces & Polymorphism | 📞 Developed **Customer Service Call Log Manager** using arrays and methods<br>🗂️ Stored call logs with PhoneNumber, Message, and Timestamp<br>🦜 Designed **Bird Sanctuary System** using inheritance and polymorphism<br>🔁 Applied polymorphism by iterating arrays and invoking behavior via interfaces<br>🔐 Completed remaining **Encapsulation assignments** with proper access control and validation |
+| **Day 18** | Wednesday, January 7, 2026 | Data Structures & Scenario-Based Design | 🔗 Studied **Singly Linked List**, **Doubly Linked List**, and **Circular Linked List** concepts with basic operations (insertion, deletion, traversal)<br>💼 Implemented **Employee Wage Computation Program** as a scenario-based application<br>🎲 Used **RANDOM** method to check employee attendance<br>💰 Calculated **Daily Employee Wage** <br>🕒 Added **Part-Time Employee Wage** logic<br>📅 Calculated **Monthly Wages**|
+
 
 
 
@@ -122,6 +124,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz's training program for learning, practice, and assessment purposes. |
+
 
 
 
