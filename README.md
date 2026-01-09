@@ -82,7 +82,12 @@
 | ---------- | ----------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Day 16** | Monday, January 5, 2026 | Advanced OOP – Encapsulation, Polymorphism, Interfaces & Abstraction | 📘 Practiced for Polymorphism, Interfaces, and Abstract Classes<br>🏥 Developed **Hospital Patient Management System** using OOP concepts (Patient, Doctor, Bill)<br>🔐 Applied **Encapsulation** using private fields, public properties, validation logic, and readonly members<br>🧬 Implemented **Inheritance** (InPatient, OutPatient) and **Polymorphism** using overridden DisplayInfo()<br>💳 Used **Interface**  for billing abstraction<br>🚗 Built **Vehicle Rental Application** using inheritance (Bike, Car, Truck) and interface **IRentable** with CalculateRent()|
 | **Day 17** | Tuesday, January 6, 2026 | OOP Design, Interfaces & Polymorphism | 📞 Developed **Customer Service Call Log Manager** using arrays and methods<br>🗂️ Stored call logs with PhoneNumber, Message, and Timestamp<br>🦜 Designed **Bird Sanctuary System** using inheritance and polymorphism<br>🔁 Applied polymorphism by iterating arrays and invoking behavior via interfaces<br>🔐 Completed remaining **Encapsulation assignments** with proper access control and validation |
-| **Day 18** | Wednesday, January 7, 2026 | Data Structures & Scenario-Based Design | 🔗 Studied **Singly Linked List**, **Doubly Linked List**, and **Circular Linked List** concepts with basic operations (insertion, deletion, traversal)<br>💼 Implemented **Employee Wage Computation Program** as a scenario-based application<br>🎲 Used **RANDOM** method to check employee attendance<br>💰 Calculated **Daily Employee Wage** <br>🕒 Added **Part-Time Employee Wage** logic<br>📅 Calculated **Monthly Wages**|
+| **Day 18** | Wednesday, January 7, 2026 | Data Structures & Scenario-Based Design | 🔗 Studied **Singly Linked List**, **Doubly Linked List**, and **Circular Linked List** concepts with basic operations (insertion, deletion, traversal)<br>💼 Implemented **Employee Wage Computation Program** as a scenario-based application<br>🎲 Used **RANDOM** method to check employee attendance<br>💰 Calculated **Daily Employee Wage** <br>🕒 Added **Part-Time Employee Wage** logic<br>📅 Calculated **Monthly Wages**<br>🧩 Completed Linked List assignments covering all three list types|
+| **Day 19** | Thursday, January 8, 2026 | Data Structures & Advanced OOP | 📥 Studied **Queue** data structure and its operations (enqueue, dequeue, peek)<br>🧠 Implemented a **Custom HashMap** to understand key-value storage logic<br>🏆 Completed **assignments** based on Queue and HashMap concepts<br>🏠 Built **Smart Home Automation System** using OOP principles |
+| **Day 20** | Friday, January 9, 2026 | Sorting Algorithms & Scenario-Based Logic | 🔢 Studied **Bubble Sort**, **Insertion Sort**, **Merge Sort**, and **Quick Sort** (working, comparison, and use cases)<br>🏃‍♂️ Developed **FitTrack – Fitness Tracker** scenario-based application<br>🏧 Implemented **ATM Dispenser Logic** scenario<br>• Scenario A: Calculated minimum number of notes for ₹880 using ₹1–₹500 denominations<br>• Scenario B: Updated logic after removing ₹500 note<br>• Scenario C: Displayed fallback combination when exact change is not possible<br>📝 Completed **assignments** on all sorting techniques |
+
+
+
 
 
 
@@ -124,6 +129,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz's training program for learning, practice, and assessment purposes. |
+
 
 
 
