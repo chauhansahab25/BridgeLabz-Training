@@ -9,46 +9,105 @@ namespace CG_Practice.oopsscenario.FitTrackFitnessTracker
             Console.WriteLine("=== FitTrack - Fitness Tracker ===");
             Console.WriteLine();
 
+            // Get user details
+            Console.Write("Enter your name: ");
+            string name = Console.ReadLine();
+            
+            Console.Write("Enter your age: ");
+            int age = int.Parse(Console.ReadLine());
+            
+            Console.Write("Enter your weight (kg): ");
+            double weight = double.Parse(Console.ReadLine());
+            
+            Console.Write("Enter your height (cm): ");
+            double height = double.Parse(Console.ReadLine());
+            
+            Console.Write("Enter your fitness goal: ");
+            string goal = Console.ReadLine();
+
             // Create user profile
-            UserProfile user = new UserProfile("John Doe", 25, 70.5, 175);
-            user.SetFitnessGoal("Lose 5kg in 3 months");
+            UserProfile user = new UserProfile(name, age, weight, height);
+            user.SetFitnessGoal(goal);
+            Console.WriteLine();
             user.DisplayProfile();
             Console.WriteLine();
 
-            // Cardio workout
-            CardioWorkout cardio = new CardioWorkout("Morning Run", "Running");
-            cardio.StartWorkout();
-            
-            Console.WriteLine("Press any key to end cardio workout...");
-            Console.ReadKey();
-            
-            cardio.EndWorkout();
-            cardio.SetDistance(5.2);
-            cardio.SetSpeed(8.5);
-            cardio.CalculateCaloriesBurned();
-            
-            Console.WriteLine();
-            cardio.DisplayProgress();
-            user.UpdateProgress(cardio.CaloriesBurned);
+            // Choose workout type
+            Console.WriteLine("Choose workout type:");
+            Console.WriteLine("1. Cardio Workout");
+            Console.WriteLine("2. Strength Workout");
+            Console.Write("Enter choice: ");
+            int choice = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            // Strength workout
-            StrengthWorkout strength = new StrengthWorkout("Chest Press", "Chest");
-            strength.StartWorkout();
-            
-            Console.WriteLine("Press any key to end strength workout...");
-            Console.ReadKey();
-            
-            strength.EndWorkout();
-            strength.SetWorkoutDetails(3, 12, 60);
-            strength.CalculateCaloriesBurned();
-            
-            Console.WriteLine();
-            strength.DisplayProgress();
-            user.UpdateProgress(strength.CaloriesBurned);
-            Console.WriteLine();
+            if (choice == 1)
+            {
+                // Cardio workout
+                Console.Write("Enter cardio type (Running/Cycling/Swimming): ");
+                string cardioType = Console.ReadLine();
+                
+                CardioWorkout cardio = new CardioWorkout("Cardio Session", cardioType);
+                cardio.StartWorkout();
+                
+                Console.WriteLine("Press any key to end workout...");
+                Console.ReadKey();
+                
+                cardio.EndWorkout();
+                
+                Console.Write("Enter distance covered (km): ");
+                double distance = double.Parse(Console.ReadLine());
+                
+                Console.Write("Enter average speed (km/h): ");
+                double speed = double.Parse(Console.ReadLine());
+                
+                cardio.SetDistance(distance);
+                cardio.SetSpeed(speed);
+                cardio.CalculateCaloriesBurned();
+                
+                Console.WriteLine();
+                cardio.DisplayProgress();
+                user.UpdateProgress(cardio.CaloriesBurned);
+            }
+            else if (choice == 2)
+            {
+                // Strength workout
+                Console.Write("Enter exercise name: ");
+                string exerciseName = Console.ReadLine();
+                
+                Console.Write("Enter muscle group: ");
+                string muscleGroup = Console.ReadLine();
+                
+                StrengthWorkout strength = new StrengthWorkout(exerciseName, muscleGroup);
+                strength.StartWorkout();
+                
+                Console.WriteLine("Press any key to end workout...");
+                Console.ReadKey();
+                
+                strength.EndWorkout();
+                
+                Console.Write("Enter number of sets: ");
+                int sets = int.Parse(Console.ReadLine());
+                
+                Console.Write("Enter reps per set: ");
+                int reps = int.Parse(Console.ReadLine());
+                
+                Console.Write("Enter weight used (kg): ");
+                double workoutWeight = double.Parse(Console.ReadLine());
+                
+                strength.SetWorkoutDetails(sets, reps, workoutWeight);
+                strength.CalculateCaloriesBurned();
+                
+                Console.WriteLine();
+                strength.DisplayProgress();
+                user.UpdateProgress(strength.CaloriesBurned);
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice!");
+            }
 
-            // Display updated profile
+            Console.WriteLine();
+            Console.WriteLine("=== Updated Profile ===");
             user.DisplayProfile();
             
             Console.WriteLine();

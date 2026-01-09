@@ -16,6 +16,17 @@ namespace CG_Practice.oopsscenario.FitTrackFitnessTracker
             Speed = 0;
         }
 
+        public override void EndWorkout()
+        {
+            EndTime = DateTime.Now;
+            IsActive = false;
+            
+            Random random = new Random();
+            Duration = random.Next(15, 61);
+            
+            Console.WriteLine(WorkoutName + " workout ended. Duration: " + Duration + " minutes (Random)");
+        }
+
         public void SetDistance(double distance)
         {
             Distance = distance;

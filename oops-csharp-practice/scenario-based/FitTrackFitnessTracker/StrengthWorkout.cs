@@ -2,7 +2,6 @@ using System;
 
 namespace CG_Practice.oopsscenario.FitTrackFitnessTracker
 {
-    // strength workout class
     class StrengthWorkout : Workout
     {
         public int Sets;
@@ -16,6 +15,17 @@ namespace CG_Practice.oopsscenario.FitTrackFitnessTracker
             Sets = 0;
             Reps = 0;
             Weight = 0;
+        }
+
+        public override void EndWorkout()
+        {
+            EndTime = DateTime.Now;
+            IsActive = false;
+            
+            Random random = new Random();
+            Duration = random.Next(20, 91);
+            
+            Console.WriteLine(WorkoutName + " workout ended. Duration: " + Duration + " minutes (Random)");
         }
 
         public void SetWorkoutDetails(int sets, int reps, double weight)
