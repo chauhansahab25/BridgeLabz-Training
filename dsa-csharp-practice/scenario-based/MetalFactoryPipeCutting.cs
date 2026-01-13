@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CG_Practice.dsacsharp
+namespace CG_Practice.dsascenario
 {
     class MetalFactoryPipeCutting
     {
