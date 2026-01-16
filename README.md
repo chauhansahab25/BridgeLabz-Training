@@ -86,6 +86,7 @@
 | **Day 19** | Thursday, January 8, 2026 | Data Structures & Advanced OOP | 📥 Studied **Queue** data structure and its operations (enqueue, dequeue, peek)<br>🧠 Implemented a **Custom HashMap** to understand key-value storage logic<br>🏆 Completed **assignments** based on Queue and HashMap concepts<br>🏠 Built **Smart Home Automation System** using OOP principles |
 | **Day 20** | Friday, January 9, 2026 | Sorting Algorithms & Scenario-Based Logic | 🔢 Studied **Bubble Sort**, **Insertion Sort**, **Merge Sort**, and **Quick Sort** (working, comparison, and use cases)<br>🏃‍♂️ Developed **FitTrack – Fitness Tracker** scenario-based application<br>🏧 Implemented **ATM Dispenser Logic** scenario<br>• Scenario A: Calculated minimum number of notes for ₹880 using ₹1–₹500 denominations<br>• Scenario B: Updated logic after removing ₹500 note<br>• Scenario C: Displayed fallback combination when exact change is not possible<br>📝 Completed **assignments** on all sorting techniques |
 ---
+✅ Week 5 (Day 21 – Day 25 | Jan 12, 2026 – Jan 16, 2026)
 | Day        | Date                        | Focus Area                              | Key Activities                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ---------- | --------------------------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Day 21** | Monday, January 12, 2026    | Strings & Searching Algorithms          | 🧵 Studied **StringBuilder** and **StringBuffer** and their performance differences<br>🔍 Learned **Linear Search** and **Binary Search** algorithms<br>🏭 Implemented **Metal Factory Pipe Cutting** problem to maximize revenue using optimal cut strategies<br>🪵 Built **Custom Furniture Manufacturing** solution to determine best rod cuts considering revenue and waste constraints                                                                           |
@@ -138,6 +139,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz's training program for learning, practice, and assessment purposes. |
+
 
 
 
