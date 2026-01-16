@@ -8,5 +8,8 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
         
         //UC2 display all contacts
         void DisplayAllContacts();
+        
+        //UC3 edit existing contact by name
+        void EditContact();
     }
 }

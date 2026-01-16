@@ -21,7 +21,8 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                 Console.WriteLine("\n=== Address Book Menu ===");
                 Console.WriteLine("1. Add Contact");
                 Console.WriteLine("2. Display All Contacts");
-                Console.WriteLine("3. Exit");
+                Console.WriteLine("3. Edit Contact");
+                Console.WriteLine("4. Exit");
 
                 int choice = Utility.GetIntInput("Enter your choice: ");
 
@@ -34,6 +35,9 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                         addressBook.DisplayAllContacts();
                         break;
                     case 3:
+                        addressBook.EditContact();
+                        break;
+                    case 4:
                         exit = true;
                         Console.WriteLine("Exiting Address Book Program...");
                         break;
