@@ -2,7 +2,7 @@ using System;
 
 namespace CG_Practice.oopsscenario.AddressBookSystem
 {
-    // UC1: Menu class for user interface
+    //UC1 Menu class for user interface
     public class Menu
     {
         private IAddressBook addressBook;
@@ -12,12 +12,14 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
             this.addressBook = addressBook;
         }
 
+        //UC2 display menu and handle user choices
         public void DisplayMenu()
         {
             bool exit = false;
             while (!exit)
             {
-                Console.WriteLine("\n1. Add Contact");
+                Console.WriteLine("\n=== Address Book Menu ===");
+                Console.WriteLine("1. Add Contact");
                 Console.WriteLine("2. Display All Contacts");
                 Console.WriteLine("3. Exit");
 

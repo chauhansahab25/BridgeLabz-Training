@@ -2,7 +2,7 @@ using System;
 
 namespace CG_Practice.oopsscenario.AddressBookSystem
 {
-    // UC1: Main class
+    //Main class
     class AddressBookMain
     {
         static void Main(string[] args)

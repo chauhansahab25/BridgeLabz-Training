@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CG_Practice.oopsscenario.AddressBookSystem
 {
-    // UC1: Contact class with encapsulation
+    //UC1 Contact class with encapsulation
     public class Contact
     {
         private string firstName;
@@ -24,6 +24,7 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
         public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
         public string Email { get => email; set => email = value; }
 
+        //UC2 display contact details
         public void DisplayContact()
         {
             Console.WriteLine($"\nName: {FirstName} {LastName}");
@@ -34,7 +35,6 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
         }
     }
 
-    // UC1: AddressBook class implementing IAddressBook interface
     public class AddressBook : IAddressBook
     {
         private List<Contact> contacts;
@@ -44,8 +44,10 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
             contacts = new List<Contact>();
         }
 
+        //UC2 add new contact to address book
         public void AddContact()
         {
+            Console.WriteLine("\n--- Add New Contact ---");
             Contact contact = new Contact
             {
                 FirstName = Utility.GetInput("Enter First Name: "),
@@ -62,6 +64,7 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
             Console.WriteLine("\nContact added successfully!");
         }
 
+        //UC2 display all contacts in address book
         public void DisplayAllContacts()
         {
             if (contacts.Count == 0)
