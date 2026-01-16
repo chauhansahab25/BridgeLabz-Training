@@ -3,38 +3,30 @@ using System.Collections.Generic;
 
 namespace CG_Practice.oopsscenario.AddressBookSystem
 {
-    //UC1 Contact class with encapsulation
+    //UC1 Contact class
     public class Contact
     {
-        private string firstName;
-        private string lastName;
-        private string address;
-        private string city;
-        private string state;
-        private string zip;
-        private string phoneNumber;
-        private string email;
+        public string FirstName;
+        public string LastName;
+        public string Address;
+        public string City;
+        public string State;
+        public string Zip;
+        public string PhoneNumber;
+        public string Email;
 
-        public string FirstName { get => firstName; set => firstName = value; }
-        public string LastName { get => lastName; set => lastName = value; }
-        public string Address { get => address; set => address = value; }
-        public string City { get => city; set => city = value; }
-        public string State { get => state; set => state = value; }
-        public string Zip { get => zip; set => zip = value; }
-        public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
-        public string Email { get => email; set => email = value; }
-
-        //UC2 display contact details
+        //UC2 display contact
         public void DisplayContact()
         {
-            Console.WriteLine($"\nName: {FirstName} {LastName}");
-            Console.WriteLine($"Address: {Address}");
-            Console.WriteLine($"City: {City}, State: {State}, Zip: {Zip}");
-            Console.WriteLine($"Phone: {PhoneNumber}");
-            Console.WriteLine($"Email: {Email}");
+            Console.WriteLine("\nName: " + FirstName + " " + LastName);
+            Console.WriteLine("Address: " + Address);
+            Console.WriteLine("City: " + City + ", State: " + State + ", Zip: " + Zip);
+            Console.WriteLine("Phone: " + PhoneNumber);
+            Console.WriteLine("Email: " + Email);
         }
     }
 
+    //UC1 AddressBook class
     public class AddressBook : IAddressBook
     {
         private List<Contact> contacts;
@@ -42,48 +34,54 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
         public AddressBook()
         {
             contacts = new List<Contact>();
-            InitializeWithDefaultContact();
-        }
-
-        //UC2 initialize with default contact
-        private void InitializeWithDefaultContact()
-        {
-            Contact defaultContact = new Contact
-            {
-                FirstName = "Priyanshu",
-                LastName = "Chauhan",
-                Address = "Moh.Farastoli",
-                City = "Bijnor",
-                State = "Uttar Pradesh",
-                Zip = "246721",
-                PhoneNumber = "7906801474",
-                Email = "Priyanshu.chauhan_cs22@gla.ac.in"
-            };
+            
+            Contact defaultContact = new Contact();
+            defaultContact.FirstName = "Priyanshu";
+            defaultContact.LastName = "Chauhan";
+            defaultContact.Address = "Moh.Farastoli";
+            defaultContact.City = "Bijnor";
+            defaultContact.State = "Uttar Pradesh";
+            defaultContact.Zip = "246721";
+            defaultContact.PhoneNumber = "7906801474";
+            defaultContact.Email = "Priyanshu.chauhan_cs22@gla.ac.in";
             contacts.Add(defaultContact);
-            Console.WriteLine("Default contact added: Priyanshu Chauhan");
         }
 
-        //UC2 add new contact to address book
+        //UC2 add contact
         public void AddContact()
         {
-            Console.WriteLine("\n--- Add New Contact ---");
-            Contact contact = new Contact
-            {
-                FirstName = Utility.GetInput("Enter First Name: "),
-                LastName = Utility.GetInput("Enter Last Name: "),
-                Address = Utility.GetInput("Enter Address: "),
-                City = Utility.GetInput("Enter City: "),
-                State = Utility.GetInput("Enter State: "),
-                Zip = Utility.GetInput("Enter Zip: "),
-                PhoneNumber = Utility.GetInput("Enter Phone Number: "),
-                Email = Utility.GetInput("Enter Email: ")
-            };
-
+            Console.WriteLine("\n--- Add Contact ---");
+            Contact contact = new Contact();
+            
+            Console.Write("Enter First Name: ");
+            contact.FirstName = Console.ReadLine();
+            
+            Console.Write("Enter Last Name: ");
+            contact.LastName = Console.ReadLine();
+            
+            Console.Write("Enter Address: ");
+            contact.Address = Console.ReadLine();
+            
+            Console.Write("Enter City: ");
+            contact.City = Console.ReadLine();
+            
+            Console.Write("Enter State: ");
+            contact.State = Console.ReadLine();
+            
+            Console.Write("Enter Zip: ");
+            contact.Zip = Console.ReadLine();
+            
+            Console.Write("Enter Phone Number: ");
+            contact.PhoneNumber = Console.ReadLine();
+            
+            Console.Write("Enter Email: ");
+            contact.Email = Console.ReadLine();
+            
             contacts.Add(contact);
             Console.WriteLine("\nContact added successfully!");
         }
 
-        //UC2 display all contacts in address book
+        //UC2 display all contacts
         public void DisplayAllContacts()
         {
             if (contacts.Count == 0)
@@ -93,27 +91,37 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
             }
 
             Console.WriteLine("\n--- All Contacts ---");
-            foreach (var contact in contacts)
+            for (int i = 0; i < contacts.Count; i++)
             {
-                contact.DisplayContact();
+                contacts[i].DisplayContact();
             }
         }
 
-        //UC3 edit existing contact by name
+        //UC3 edit contact
         public void EditContact()
         {
             if (contacts.Count == 0)
             {
-                Console.WriteLine("\nNo contacts available to edit.");
+                Console.WriteLine("\nNo contacts available.");
                 return;
             }
 
             Console.WriteLine("\n--- Edit Contact ---");
-            string firstName = Utility.GetInput("Enter First Name: ");
-            string lastName = Utility.GetInput("Enter Last Name: ");
+            Console.WriteLine("Enter First Name: ");
+            string firstName = Console.ReadLine();
+            
+            Console.WriteLine("Enter Last Name: ");
+            string lastName = Console.ReadLine();
 
-            Contact contact = contacts.Find(c => c.FirstName.Equals(firstName, StringComparison.OrdinalIgnoreCase) && 
-                                                  c.LastName.Equals(lastName, StringComparison.OrdinalIgnoreCase));
+            Contact contact = null;
+            for (int i = 0; i < contacts.Count; i++)
+            {
+                if (contacts[i].FirstName.ToLower() == firstName.ToLower() && contacts[i].LastName.ToLower() == lastName.ToLower())
+                {
+                    contact = contacts[i];
+                    break;
+                }
+            }
 
             if (contact == null)
             {
@@ -124,40 +132,90 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
             Console.WriteLine("\nContact found:");
             contact.DisplayContact();
 
-            string confirm = Utility.GetInput("\nDo you want to edit this contact? (yes/no): ");
-            if (!confirm.Equals("yes", StringComparison.OrdinalIgnoreCase))
+            Console.WriteLine("\nEdit this contact? (yes/no): ");
+            string confirm = Console.ReadLine();
+            
+            if (confirm.ToLower() != "yes")
             {
                 Console.WriteLine("\nEdit cancelled.");
                 return;
             }
 
-            Console.WriteLine("\nEnter new details (press Enter to keep current value):");
+            Console.WriteLine("\nEnter new details:");
             
-            string input = Utility.GetInput($"First Name [{contact.FirstName}]: ");
-            if (!string.IsNullOrWhiteSpace(input)) contact.FirstName = input;
+            Console.Write("Enter First Name: ");
+            contact.FirstName = Console.ReadLine();
 
-            input = Utility.GetInput($"Last Name [{contact.LastName}]: ");
-            if (!string.IsNullOrWhiteSpace(input)) contact.LastName = input;
+            Console.Write("Enter Last Name: ");
+            contact.LastName = Console.ReadLine();
 
-            input = Utility.GetInput($"Address [{contact.Address}]: ");
-            if (!string.IsNullOrWhiteSpace(input)) contact.Address = input;
+            Console.Write("Enter Address: ");
+            contact.Address = Console.ReadLine();
 
-            input = Utility.GetInput($"City [{contact.City}]: ");
-            if (!string.IsNullOrWhiteSpace(input)) contact.City = input;
+            Console.Write("Enter City: ");
+            contact.City = Console.ReadLine();
 
-            input = Utility.GetInput($"State [{contact.State}]: ");
-            if (!string.IsNullOrWhiteSpace(input)) contact.State = input;
+            Console.Write("Enter State: ");
+            contact.State = Console.ReadLine();
 
-            input = Utility.GetInput($"Zip [{contact.Zip}]: ");
-            if (!string.IsNullOrWhiteSpace(input)) contact.Zip = input;
+            Console.Write("Enter Zip: ");
+            contact.Zip = Console.ReadLine();
 
-            input = Utility.GetInput($"Phone Number [{contact.PhoneNumber}]: ");
-            if (!string.IsNullOrWhiteSpace(input)) contact.PhoneNumber = input;
+            Console.Write("Enter Phone Number: ");
+            contact.PhoneNumber = Console.ReadLine();
 
-            input = Utility.GetInput($"Email [{contact.Email}]: ");
-            if (!string.IsNullOrWhiteSpace(input)) contact.Email = input;
+            Console.Write("Enter Email: ");
+            contact.Email = Console.ReadLine();
 
-            Console.WriteLine("\nContact updated successfully!");
+            Console.WriteLine("\nContact updated!");
+        }
+
+        //UC4 delete contact
+        public void DeleteContact()
+        {
+            if (contacts.Count == 0)
+            {
+                Console.WriteLine("\nNo contacts available.");
+                return;
+            }
+
+            Console.WriteLine("\n--- Delete Contact ---");
+            Console.Write("Enter First Name: ");
+            string firstName = Console.ReadLine();
+            
+            Console.Write("Enter Last Name: ");
+            string lastName = Console.ReadLine();
+
+            Contact contact = null;
+            for (int i = 0; i < contacts.Count; i++)
+            {
+                if (contacts[i].FirstName.ToLower() == firstName.ToLower() && contacts[i].LastName.ToLower() == lastName.ToLower())
+                {
+                    contact = contacts[i];
+                    break;
+                }
+            }
+
+            if (contact == null)
+            {
+                Console.WriteLine("\nContact not found.");
+                return;
+            }
+
+            Console.WriteLine("\nContact found:");
+            contact.DisplayContact();
+
+            Console.WriteLine("\nDelete this contact? (yes/no): ");
+            string confirm = Console.ReadLine();
+            
+            if (confirm.ToLower() != "yes")
+            {
+                Console.WriteLine("\nDelete cancelled.");
+                return;
+            }
+
+            contacts.Remove(contact);
+            Console.WriteLine("\nContact deleted!");
         }
     }
 }

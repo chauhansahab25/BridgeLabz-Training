@@ -2,17 +2,17 @@ using System;
 
 namespace CG_Practice.oopsscenario.AddressBookSystem
 {
-    //UC1 Utility class for input operations
+    //UC1 Utility class
     public class Utility
     {
-        //UC2 get string input from console
+        //UC2 get string input
         public static string GetInput(string prompt)
         {
             Console.Write(prompt);
             return Console.ReadLine();
         }
 
-        //UC2 get integer input from console with validation
+        //UC2 get integer input
         public static int GetIntInput(string prompt)
         {
             Console.Write(prompt);
