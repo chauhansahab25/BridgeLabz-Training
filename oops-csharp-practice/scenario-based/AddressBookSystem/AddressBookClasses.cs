@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace CG_Practice.oopsscenario.AddressBookSystem
 {
@@ -29,11 +28,13 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
     //UC1 AddressBook class
     public class AddressBook : IAddressBook
     {
-        private List<Contact> contacts;
+        private Contact[] contacts;
+        private int count;
 
         public AddressBook()
         {
-            contacts = new List<Contact>();
+            contacts = new Contact[100];
+            count = 0;
             
             Contact defaultContact = new Contact();
             defaultContact.FirstName = "Priyanshu";
@@ -44,7 +45,8 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
             defaultContact.Zip = "246721";
             defaultContact.PhoneNumber = "7906801474";
             defaultContact.Email = "Priyanshu.chauhan_cs22@gla.ac.in";
-            contacts.Add(defaultContact);
+            contacts[count] = defaultContact;
+            count++;
         }
 
         //UC2 add contact
@@ -53,45 +55,46 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
             Console.WriteLine("\n--- Add Contact ---");
             Contact contact = new Contact();
             
-            Console.Write("Enter First Name: ");
+            Console.WriteLine("Enter First Name: ");
             contact.FirstName = Console.ReadLine();
             
-            Console.Write("Enter Last Name: ");
+            Console.WriteLine("Enter Last Name: ");
             contact.LastName = Console.ReadLine();
             
-            Console.Write("Enter Address: ");
+            Console.WriteLine("Enter Address: ");
             contact.Address = Console.ReadLine();
             
-            Console.Write("Enter City: ");
+            Console.WriteLine("Enter City: ");
             contact.City = Console.ReadLine();
             
-            Console.Write("Enter State: ");
+            Console.WriteLine("Enter State: ");
             contact.State = Console.ReadLine();
             
-            Console.Write("Enter Zip: ");
+            Console.WriteLine("Enter Zip: ");
             contact.Zip = Console.ReadLine();
             
-            Console.Write("Enter Phone Number: ");
+            Console.WriteLine("Enter Phone Number: ");
             contact.PhoneNumber = Console.ReadLine();
             
-            Console.Write("Enter Email: ");
+            Console.WriteLine("Enter Email: ");
             contact.Email = Console.ReadLine();
             
-            contacts.Add(contact);
+            contacts[count] = contact;
+            count++;
             Console.WriteLine("\nContact added successfully!");
         }
 
         //UC2 display all contacts
         public void DisplayAllContacts()
         {
-            if (contacts.Count == 0)
+            if (count == 0)
             {
                 Console.WriteLine("\nNo contacts available.");
                 return;
             }
 
             Console.WriteLine("\n--- All Contacts ---");
-            for (int i = 0; i < contacts.Count; i++)
+            for (int i = 0; i < count; i++)
             {
                 contacts[i].DisplayContact();
             }
@@ -100,7 +103,7 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
         //UC3 edit contact
         public void EditContact()
         {
-            if (contacts.Count == 0)
+            if (count == 0)
             {
                 Console.WriteLine("\nNo contacts available.");
                 return;
@@ -114,7 +117,7 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
             string lastName = Console.ReadLine();
 
             Contact contact = null;
-            for (int i = 0; i < contacts.Count; i++)
+            for (int i = 0; i < count; i++)
             {
                 if (contacts[i].FirstName.ToLower() == firstName.ToLower() && contacts[i].LastName.ToLower() == lastName.ToLower())
                 {
@@ -143,28 +146,28 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
 
             Console.WriteLine("\nEnter new details:");
             
-            Console.Write("Enter First Name: ");
+            Console.WriteLine("Enter First Name: ");
             contact.FirstName = Console.ReadLine();
 
-            Console.Write("Enter Last Name: ");
+            Console.WriteLine("Enter Last Name: ");
             contact.LastName = Console.ReadLine();
 
-            Console.Write("Enter Address: ");
+            Console.WriteLine("Enter Address: ");
             contact.Address = Console.ReadLine();
 
-            Console.Write("Enter City: ");
+            Console.WriteLine("Enter City: ");
             contact.City = Console.ReadLine();
 
-            Console.Write("Enter State: ");
+            Console.WriteLine("Enter State: ");
             contact.State = Console.ReadLine();
 
-            Console.Write("Enter Zip: ");
+            Console.WriteLine("Enter Zip: ");
             contact.Zip = Console.ReadLine();
 
-            Console.Write("Enter Phone Number: ");
+            Console.WriteLine("Enter Phone Number: ");
             contact.PhoneNumber = Console.ReadLine();
 
-            Console.Write("Enter Email: ");
+            Console.WriteLine("Enter Email: ");
             contact.Email = Console.ReadLine();
 
             Console.WriteLine("\nContact updated!");
@@ -173,37 +176,37 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
         //UC4 delete contact
         public void DeleteContact()
         {
-            if (contacts.Count == 0)
+            if (count == 0)
             {
                 Console.WriteLine("\nNo contacts available.");
                 return;
             }
 
             Console.WriteLine("\n--- Delete Contact ---");
-            Console.Write("Enter First Name: ");
+            Console.WriteLine("Enter First Name: ");
             string firstName = Console.ReadLine();
             
-            Console.Write("Enter Last Name: ");
+            Console.WriteLine("Enter Last Name: ");
             string lastName = Console.ReadLine();
 
-            Contact contact = null;
-            for (int i = 0; i < contacts.Count; i++)
+            int index = -1;
+            for (int i = 0; i < count; i++)
             {
                 if (contacts[i].FirstName.ToLower() == firstName.ToLower() && contacts[i].LastName.ToLower() == lastName.ToLower())
                 {
-                    contact = contacts[i];
+                    index = i;
                     break;
                 }
             }
 
-            if (contact == null)
+            if (index == -1)
             {
                 Console.WriteLine("\nContact not found.");
                 return;
             }
 
             Console.WriteLine("\nContact found:");
-            contact.DisplayContact();
+            contacts[index].DisplayContact();
 
             Console.WriteLine("\nDelete this contact? (yes/no): ");
             string confirm = Console.ReadLine();
@@ -214,7 +217,11 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                 return;
             }
 
-            contacts.Remove(contact);
+            for (int i = index; i < count - 1; i++)
+            {
+                contacts[i] = contacts[i + 1];
+            }
+            count--;
             Console.WriteLine("\nContact deleted!");
         }
     }
