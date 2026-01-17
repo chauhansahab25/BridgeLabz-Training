@@ -8,8 +8,10 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address Book Program");
-            IAddressBook addressBook = new AddressBook();
-            Menu menu = new Menu(addressBook);
+
+            //UC6 AddressBookSystem
+            AddressBookSystem system = new AddressBookSystem();
+            Menu menu = new Menu(system);
             menu.DisplayMenu();
         }
     }
