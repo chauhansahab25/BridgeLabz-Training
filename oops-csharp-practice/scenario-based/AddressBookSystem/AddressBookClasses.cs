@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic; // UC5: Collection class
+using System.Collections.Generic;
 
 namespace CG_Practice.oopsscenario.AddressBookSystem
 {
@@ -15,6 +15,26 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
         public string PhoneNumber;
         public string Email;
 
+        //UC7 check duplicate person
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+                return false;
+
+            Contact other = obj as Contact;
+            if (other == null)
+                return false;
+
+            return this.FirstName.ToLower() == other.FirstName.ToLower()
+                && this.LastName.ToLower() == other.LastName.ToLower();
+        }
+
+        //UC7 Override GetHashCode (required when Equals is overridden)
+        public override int GetHashCode()
+        {
+            return (FirstName + LastName).ToLower().GetHashCode();
+        }
+
         //UC2 display contact
         public void DisplayContact()
         {
@@ -29,27 +49,14 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
     //UC1 AddressBook class
     public class AddressBook : IAddressBook
     {
-        //UC5 use collection instead of array
         private List<Contact> contacts;
 
         public AddressBook()
         {
             contacts = new List<Contact>();
-
-            Contact defaultContact = new Contact();
-            defaultContact.FirstName = "Priyanshu";
-            defaultContact.LastName = "Chauhan";
-            defaultContact.Address = "Moh.Farastoli";
-            defaultContact.City = "Bijnor";
-            defaultContact.State = "Uttar Pradesh";
-            defaultContact.Zip = "246721";
-            defaultContact.PhoneNumber = "7906801474";
-            defaultContact.Email = "Priyanshu.chauhan_cs22@gla.ac.in";
-
-            contacts.Add(defaultContact);
         }
 
-        //UC2 add contact
+        //UC7 duplicate check
         public void AddContact()
         {
             Contact contact = new Contact();
@@ -59,6 +66,13 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
 
             Console.WriteLine("Enter Last Name: ");
             contact.LastName = Console.ReadLine();
+
+            //UC7 duplicate check using collection method
+            if (contacts.Contains(contact))
+            {
+                Console.WriteLine("Duplicate contact found. Cannot add same person.");
+                return;
+            }
 
             Console.WriteLine("Enter Address: ");
             contact.Address = Console.ReadLine();
@@ -89,7 +103,7 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
 
             while (choice.ToLower() == "yes")
             {
-                AddContact();
+                AddContact(); 
                 Console.WriteLine("Do you want to add another contact? (yes/no): ");
                 choice = Console.ReadLine();
             }
@@ -172,5 +186,9 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
 
             Console.WriteLine("Contact not found.");
         }
+        public void AddDefaultContact(Contact contact)
+            {
+                contacts.Add(contact);
+            }
     }
 }

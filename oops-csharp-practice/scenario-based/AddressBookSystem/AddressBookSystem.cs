@@ -12,9 +12,26 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
         public AddressBookSystem()
         {
             addressBooks = new Dictionary<string, AddressBook>();
+
+            //UC6 Default Address Book with one default contact
+            AddressBook defaultBook = new AddressBook();
+
+            Contact defaultContact = new Contact();
+            defaultContact.FirstName = "Priyanshu";
+            defaultContact.LastName = "Chauhan";
+            defaultContact.Address = "Moh.Farastoli";
+            defaultContact.City = "Bijnor";
+            defaultContact.State = "Uttar Pradesh";
+            defaultContact.Zip = "246721";
+            defaultContact.PhoneNumber = "7906801474";
+            defaultContact.Email = "Priyanshu.chauhan_cs22@gla.ac.in";
+
+            defaultBook.AddDefaultContact(defaultContact);
+
+            addressBooks.Add("Default", defaultBook);
         }
 
-        //UC6 Add new Address Book with unique name
+        //UC6 Add new Address Book
         public void AddAddressBook()
         {
             Console.WriteLine("Enter Address Book Name: ");
@@ -26,9 +43,7 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                 return;
             }
 
-            AddressBook addressBook = new AddressBook();
-            addressBooks.Add(name, addressBook);
-
+            addressBooks.Add(name, new AddressBook());
             Console.WriteLine("Address Book added successfully!");
         }
 
@@ -48,7 +63,7 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
             }
         }
 
-        //UC6 Select Address Book to work on
+        //UC6 Get selected Address Book
         public AddressBook GetAddressBook()
         {
             Console.WriteLine("Enter Address Book Name: ");
