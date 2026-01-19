@@ -6,17 +6,21 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
     //UC6 AddressBookSystem class
     public class AddressBookSystem
     {
-        //UC6 Dictionary to store multiple Address Books
         private Dictionary<string, AddressBook> addressBooks;
+
+        //UC9 city and state dictionaries
+        private Dictionary<string, List<Contact>> cityMap;
+        private Dictionary<string, List<Contact>> stateMap;
 
         public AddressBookSystem()
         {
             addressBooks = new Dictionary<string, AddressBook>();
+            cityMap = new Dictionary<string, List<Contact>>();
+            stateMap = new Dictionary<string, List<Contact>>();
 
-            //UC6 Default Address Book
+            //Default Address Book
             AddressBook defaultBook = new AddressBook();
 
-            //Default Contact
             Contact defaultContact = new Contact();
             defaultContact.FirstName = "Priyanshu";
             defaultContact.LastName = "Chauhan";
@@ -28,14 +32,13 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
             defaultContact.Email = "Priyanshu.chauhan_cs22@gla.ac.in";
 
             defaultBook.AddDefaultContact(defaultContact);
-
             addressBooks.Add("Default", defaultBook);
         }
 
-        //UC6 Add new Address Book
+        //UC6 add address book
         public void AddAddressBook()
         {
-            Console.WriteLine("Enter Address Book Name: ");
+            Console.WriteLine("Enter Address Book Name:");
             string name = Console.ReadLine();
 
             if (addressBooks.ContainsKey(name))
@@ -45,91 +48,89 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
             }
 
             addressBooks.Add(name, new AddressBook());
-            Console.WriteLine("Address Book added successfully!");
+            Console.WriteLine("Address Book added!");
         }
 
-        //UC6 Display all Address Book names
+        //UC6 display address books
         public void DisplayAddressBooks()
         {
-            if (addressBooks.Count == 0)
-            {
-                Console.WriteLine("No Address Books available.");
-                return;
-            }
-
-            Console.WriteLine("Available Address Books:");
             foreach (string name in addressBooks.Keys)
             {
                 Console.WriteLine("- " + name);
             }
         }
 
-        //UC6 Get Address Book by name
+        //UC6 get address book
         public AddressBook GetAddressBook()
         {
-            Console.WriteLine("Enter Address Book Name: ");
+            Console.WriteLine("Enter Address Book Name:");
             string name = Console.ReadLine();
 
             if (addressBooks.ContainsKey(name))
-            {
                 return addressBooks[name];
-            }
 
-            Console.WriteLine("Address Book not found!");
+            Console.WriteLine("Address Book not found.");
             return null;
         }
 
-        //UC8 Search person by City across all Address Books
-        public void SearchPersonByCity()
+        //UC9 build city & state dictionaries
+        private void BuildCityStateMaps()
         {
-            Console.WriteLine("Enter City Name: ");
-            string city = Console.ReadLine();
-
-            bool found = false;
+            cityMap.Clear();
+            stateMap.Clear();
 
             foreach (AddressBook book in addressBooks.Values)
             {
                 foreach (Contact contact in book.GetAllContacts())
                 {
-                    if (contact.City != null &&
-                        contact.City.ToLower() == city.ToLower())
-                    {
-                        contact.DisplayContact();
-                        found = true;
-                    }
-                }
-            }
+                    if (!cityMap.ContainsKey(contact.City))
+                        cityMap[contact.City] = new List<Contact>();
 
-            if (!found)
-            {
-                Console.WriteLine("No person found in this city.");
+                    cityMap[contact.City].Add(contact);
+
+                    if (!stateMap.ContainsKey(contact.State))
+                        stateMap[contact.State] = new List<Contact>();
+
+                    stateMap[contact.State].Add(contact);
+                }
             }
         }
 
-        //UC8 Search person by State across all Address Books
-        public void SearchPersonByState()
+        //UC9 view persons by city
+        public void ViewPersonsByCity()
         {
-            Console.WriteLine("Enter State Name: ");
+            BuildCityStateMaps();
+
+            Console.WriteLine("Enter City:");
+            string city = Console.ReadLine();
+
+            if (cityMap.ContainsKey(city))
+            {
+                foreach (Contact c in cityMap[city])
+                    c.DisplayContact();
+            }
+            else
+            {
+                Console.WriteLine("No persons found.");
+            }
+        }
+
+        //UC9 view persons by state
+        public void ViewPersonsByState()
+        {
+            BuildCityStateMaps();
+
+            Console.WriteLine("Enter State:");
             string state = Console.ReadLine();
 
-            bool found = false;
-
-            foreach (AddressBook book in addressBooks.Values)
+            if (stateMap.ContainsKey(state))
             {
-                foreach (Contact contact in book.GetAllContacts())
-                {
-                    if (contact.State != null &&
-                        contact.State.ToLower() == state.ToLower())
-                    {
-                        contact.DisplayContact();
-                        found = true;
-                    }
-                }
+                foreach (Contact c in stateMap[state])
+                    c.DisplayContact();
             }
-
-            if (!found)
+            else
             {
-                Console.WriteLine("No person found in this state.");
+                Console.WriteLine("No persons found.");
             }
         }
     }

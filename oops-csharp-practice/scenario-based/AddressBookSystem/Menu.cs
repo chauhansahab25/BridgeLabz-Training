@@ -11,21 +11,19 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
             this.system = system;
         }
 
-        //UC6 + UC8 system menu
         public void DisplayMenu()
         {
             bool exit = false;
 
             while (!exit)
             {
-                Console.WriteLine("\n=== Address Book System Menu ===");
+                Console.WriteLine("\n=== Address Book System ===");
                 Console.WriteLine("1. Add Address Book");
                 Console.WriteLine("2. Display Address Books");
                 Console.WriteLine("3. Open Address Book");
-                Console.WriteLine("4. Search Person by City");   // UC8
-                Console.WriteLine("5. Search Person by State");  // UC8
+                Console.WriteLine("4. View Persons by City");
+                Console.WriteLine("5. View Persons by State");
                 Console.WriteLine("6. Exit");
-                Console.WriteLine("Enter your choice: ");
 
                 int choice = int.Parse(Console.ReadLine());
 
@@ -40,28 +38,22 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                     case 3:
                         AddressBook book = system.GetAddressBook();
                         if (book != null)
-                        {
                             AddressBookMenu(book);
-                        }
                         break;
                     case 4:
-                        system.SearchPersonByCity(); // UC8
+                        system.ViewPersonsByCity();
                         break;
                     case 5:
-                        system.SearchPersonByState(); // UC8
+                        system.ViewPersonsByState();
                         break;
                     case 6:
                         exit = true;
-                        break;
-                    default:
-                        Console.WriteLine("Invalid choice");
                         break;
                 }
             }
         }
 
-        //Address book menu (same as before)
-        private void AddressBookMenu(IAddressBook addressBook)
+        private void AddressBookMenu(IAddressBook book)
         {
             bool back = false;
 
@@ -80,19 +72,19 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                 switch (choice)
                 {
                     case 1:
-                        addressBook.AddContact();
+                        book.AddContact();
                         break;
                     case 2:
-                        addressBook.AddMultipleContacts();
+                        book.AddMultipleContacts();
                         break;
                     case 3:
-                        addressBook.DisplayAllContacts();
+                        book.DisplayAllContacts();
                         break;
                     case 4:
-                        addressBook.EditContact();
+                        book.EditContact();
                         break;
                     case 5:
-                        addressBook.DeleteContact();
+                        book.DeleteContact();
                         break;
                     case 6:
                         back = true;
