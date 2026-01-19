@@ -190,5 +190,12 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
             {
                 contacts.Add(contact);
             }
+
+            //UC8 get all contacts from address book
+        public List<Contact> GetAllContacts()
+            {
+                return contacts;
+            }
+
     }
 }

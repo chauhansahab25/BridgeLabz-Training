@@ -2,7 +2,6 @@ using System;
 
 namespace CG_Practice.oopsscenario.AddressBookSystem
 {
-    //UC1 Menu class
     public class Menu
     {
         private AddressBookSystem system;
@@ -12,7 +11,7 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
             this.system = system;
         }
 
-        //UC6 display system menu
+        //UC6 + UC8 system menu
         public void DisplayMenu()
         {
             bool exit = false;
@@ -23,7 +22,9 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                 Console.WriteLine("1. Add Address Book");
                 Console.WriteLine("2. Display Address Books");
                 Console.WriteLine("3. Open Address Book");
-                Console.WriteLine("4. Exit");
+                Console.WriteLine("4. Search Person by City");   // UC8
+                Console.WriteLine("5. Search Person by State");  // UC8
+                Console.WriteLine("6. Exit");
                 Console.WriteLine("Enter your choice: ");
 
                 int choice = int.Parse(Console.ReadLine());
@@ -31,34 +32,35 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                 switch (choice)
                 {
                     case 1:
-                        system.AddAddressBook(); // UC6
+                        system.AddAddressBook();
                         break;
-
                     case 2:
-                        system.DisplayAddressBooks(); // UC6
+                        system.DisplayAddressBooks();
                         break;
-
                     case 3:
-                        AddressBook book = system.GetAddressBook(); // UC6
+                        AddressBook book = system.GetAddressBook();
                         if (book != null)
                         {
                             AddressBookMenu(book);
                         }
                         break;
-
                     case 4:
-                        exit = true;
-                        Console.WriteLine("Exiting...");
+                        system.SearchPersonByCity(); // UC8
                         break;
-
+                    case 5:
+                        system.SearchPersonByState(); // UC8
+                        break;
+                    case 6:
+                        exit = true;
+                        break;
                     default:
-                        Console.WriteLine("Invalid choice.");
+                        Console.WriteLine("Invalid choice");
                         break;
                 }
             }
         }
 
-        //UC6 Menu for selected Address Book
+        //Address book menu (same as before)
         private void AddressBookMenu(IAddressBook addressBook)
         {
             bool back = false;
@@ -72,7 +74,6 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                 Console.WriteLine("4. Edit Contact");
                 Console.WriteLine("5. Delete Contact");
                 Console.WriteLine("6. Back");
-                Console.WriteLine("Enter your choice: ");
 
                 int choice = int.Parse(Console.ReadLine());
 
@@ -82,7 +83,7 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                         addressBook.AddContact();
                         break;
                     case 2:
-                        addressBook.AddMultipleContacts(); // UC5
+                        addressBook.AddMultipleContacts();
                         break;
                     case 3:
                         addressBook.DisplayAllContacts();
@@ -95,9 +96,6 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                         break;
                     case 6:
                         back = true;
-                        break;
-                    default:
-                        Console.WriteLine("Invalid choice.");
                         break;
                 }
             }
