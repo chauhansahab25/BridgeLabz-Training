@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace CG_Practice.oopsscenario.AddressBookSystem
 {
-    //UC1 AddressBook class
     public class AddressBook : IAddressBook
     {
         private List<Contact> contacts;
@@ -36,37 +35,27 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                 return;
             }
 
-            Console.WriteLine("Enter Address:");
-            contact.Address = Console.ReadLine();
-
             Console.WriteLine("Enter City:");
             contact.City = Console.ReadLine();
 
             Console.WriteLine("Enter State:");
             contact.State = Console.ReadLine();
 
-            Console.WriteLine("Enter Zip:");
-            contact.Zip = Console.ReadLine();
-
-            Console.WriteLine("Enter Phone Number:");
+            Console.WriteLine("Enter Phone:");
             contact.PhoneNumber = Console.ReadLine();
 
-            Console.WriteLine("Enter Email:");
-            contact.Email = Console.ReadLine();
-
             contacts.Add(contact);
-            Console.WriteLine("Contact added successfully!");
+            Console.WriteLine("Contact added!");
         }
 
         //UC5 add multiple contacts
         public void AddMultipleContacts()
         {
             string choice = "yes";
-
             while (choice.ToLower() == "yes")
             {
                 AddContact();
-                Console.WriteLine("Add another contact? (yes/no)");
+                Console.WriteLine("Add another? (yes/no)");
                 choice = Console.ReadLine();
             }
         }
@@ -74,37 +63,44 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
         //UC2 display contacts
         public void DisplayAllContacts()
         {
-            foreach (Contact contact in contacts)
-            {
-                contact.DisplayContact();
-            }
+            foreach (Contact c in contacts)
+                Console.WriteLine(c); // uses ToString()
         }
+
+        //UC11 sort contacts alphabetically by name
+       // UC11 sort contacts alphabetically by person's name
+        public void SortContactsByName() 
+        {
+            contacts.Sort((c1, c2) =>
+            string.Compare(
+            c1.FirstName + c1.LastName,
+            c2.FirstName + c2.LastName,
+            StringComparison.OrdinalIgnoreCase));
+            Console.WriteLine("Contacts sorted alphabetically:");
+            DisplayAllContacts();
+        }
+
 
         //UC3 edit contact
         public void EditContact()
         {
             Console.WriteLine("Enter First Name:");
-            string firstName = Console.ReadLine();
+            string fn = Console.ReadLine();
 
             Console.WriteLine("Enter Last Name:");
-            string lastName = Console.ReadLine();
+            string ln = Console.ReadLine();
 
-            foreach (Contact contact in contacts)
+            foreach (Contact c in contacts)
             {
-                if (contact.FirstName.ToLower() == firstName.ToLower() &&
-                    contact.LastName.ToLower() == lastName.ToLower())
+                if (c.FirstName.ToLower() == fn.ToLower() &&
+                    c.LastName.ToLower() == ln.ToLower())
                 {
                     Console.WriteLine("Enter new City:");
-                    contact.City = Console.ReadLine();
-
-                    Console.WriteLine("Enter new State:");
-                    contact.State = Console.ReadLine();
-
+                    c.City = Console.ReadLine();
                     Console.WriteLine("Contact updated!");
                     return;
                 }
             }
-
             Console.WriteLine("Contact not found.");
         }
 
@@ -112,26 +108,25 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
         public void DeleteContact()
         {
             Console.WriteLine("Enter First Name:");
-            string firstName = Console.ReadLine();
+            string fn = Console.ReadLine();
 
             Console.WriteLine("Enter Last Name:");
-            string lastName = Console.ReadLine();
+            string ln = Console.ReadLine();
 
             for (int i = 0; i < contacts.Count; i++)
             {
-                if (contacts[i].FirstName.ToLower() == firstName.ToLower() &&
-                    contacts[i].LastName.ToLower() == lastName.ToLower())
+                if (contacts[i].FirstName.ToLower() == fn.ToLower() &&
+                    contacts[i].LastName.ToLower() == ln.ToLower())
                 {
                     contacts.RemoveAt(i);
                     Console.WriteLine("Contact deleted!");
                     return;
                 }
             }
-
             Console.WriteLine("Contact not found.");
         }
 
-        //UC8/UC9 get all contacts
+        //UC8–UC10
         public List<Contact> GetAllContacts()
         {
             return contacts;

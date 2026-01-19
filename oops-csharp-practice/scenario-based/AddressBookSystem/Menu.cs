@@ -23,8 +23,8 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                 Console.WriteLine("3. Open Address Book");
                 Console.WriteLine("4. View Persons by City");
                 Console.WriteLine("5. View Persons by State");
-                Console.WriteLine("6. Count Persons by City");   // UC10
-                Console.WriteLine("7. Count Persons by State");  // UC10
+                Console.WriteLine("6. Count Persons by City");
+                Console.WriteLine("7. Count Persons by State");
                 Console.WriteLine("8. Exit");
 
                 int choice = int.Parse(Console.ReadLine());
@@ -49,6 +49,7 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
         private void AddressBookMenu(IAddressBook book)
         {
             bool back = false;
+
             while (!back)
             {
                 Console.WriteLine("\n--- Address Book Menu ---");
@@ -57,7 +58,8 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                 Console.WriteLine("3. Display Contacts");
                 Console.WriteLine("4. Edit Contact");
                 Console.WriteLine("5. Delete Contact");
-                Console.WriteLine("6. Back");
+                Console.WriteLine("6. Sort Contacts by Name"); // UC11
+                Console.WriteLine("7. Back");
 
                 int choice = int.Parse(Console.ReadLine());
 
@@ -68,7 +70,8 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                     case 3: book.DisplayAllContacts(); break;
                     case 4: book.EditContact(); break;
                     case 5: book.DeleteContact(); break;
-                    case 6: back = true; break;
+                    case 6: book.SortContactsByName(); break; // UC11
+                    case 7: back = true; break;
                 }
             }
         }
