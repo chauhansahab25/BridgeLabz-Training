@@ -23,32 +23,25 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                 Console.WriteLine("3. Open Address Book");
                 Console.WriteLine("4. View Persons by City");
                 Console.WriteLine("5. View Persons by State");
-                Console.WriteLine("6. Exit");
+                Console.WriteLine("6. Count Persons by City");   // UC10
+                Console.WriteLine("7. Count Persons by State");  // UC10
+                Console.WriteLine("8. Exit");
 
                 int choice = int.Parse(Console.ReadLine());
 
                 switch (choice)
                 {
-                    case 1:
-                        system.AddAddressBook();
-                        break;
-                    case 2:
-                        system.DisplayAddressBooks();
-                        break;
+                    case 1: system.AddAddressBook(); break;
+                    case 2: system.DisplayAddressBooks(); break;
                     case 3:
                         AddressBook book = system.GetAddressBook();
-                        if (book != null)
-                            AddressBookMenu(book);
+                        if (book != null) AddressBookMenu(book);
                         break;
-                    case 4:
-                        system.ViewPersonsByCity();
-                        break;
-                    case 5:
-                        system.ViewPersonsByState();
-                        break;
-                    case 6:
-                        exit = true;
-                        break;
+                    case 4: system.ViewPersonsByCity(); break;
+                    case 5: system.ViewPersonsByState(); break;
+                    case 6: system.CountByCity(); break;
+                    case 7: system.CountByState(); break;
+                    case 8: exit = true; break;
                 }
             }
         }
@@ -56,7 +49,6 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
         private void AddressBookMenu(IAddressBook book)
         {
             bool back = false;
-
             while (!back)
             {
                 Console.WriteLine("\n--- Address Book Menu ---");
@@ -71,24 +63,12 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
 
                 switch (choice)
                 {
-                    case 1:
-                        book.AddContact();
-                        break;
-                    case 2:
-                        book.AddMultipleContacts();
-                        break;
-                    case 3:
-                        book.DisplayAllContacts();
-                        break;
-                    case 4:
-                        book.EditContact();
-                        break;
-                    case 5:
-                        book.DeleteContact();
-                        break;
-                    case 6:
-                        back = true;
-                        break;
+                    case 1: book.AddContact(); break;
+                    case 2: book.AddMultipleContacts(); break;
+                    case 3: book.DisplayAllContacts(); break;
+                    case 4: book.EditContact(); break;
+                    case 5: book.DeleteContact(); break;
+                    case 6: back = true; break;
                 }
             }
         }
