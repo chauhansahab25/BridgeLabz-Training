@@ -168,6 +168,51 @@ namespace HealthClinicApp
             Utility.PressAnyKey();
         }
 
+        public void SearchPatientRecords()
+        {
+            Console.Clear();
+            Utility.DisplayHeader("Search Patient Records");
+
+            Console.Write("Enter search (Name/ID/Phone): ");
+            string search = Console.ReadLine();
+
+            SqlConnection conn = DatabaseConnection.GetConnection();
+
+            string query = "SELECT * FROM patients WHERE name LIKE @search OR patient_id = @id OR phone = @search";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+            int id;
+            if (int.TryParse(search, out id))
+                cmd.Parameters.AddWithValue("@id", id);
+            else
+                cmd.Parameters.AddWithValue("@id", 0);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            bool found = false;
+            while (reader.Read())
+            {
+                found = true;
+                Console.WriteLine("\nPatient ID: " + reader.GetInt32(0));
+                Console.WriteLine("Name: " + reader.GetString(1));
+                Console.WriteLine("DOB: " + reader.GetDateTime(2).ToString("yyyy-MM-dd"));
+                Console.WriteLine("Phone: " + reader.GetString(3));
+                Console.WriteLine("Email: " + reader.GetString(4));
+                Console.WriteLine("Address: " + reader.GetString(5));
+                Console.WriteLine("Blood Group: " + reader.GetString(6));
+                Console.WriteLine("-----------------------------------");
+            }
+
+            if (!found)
+            {
+                Console.WriteLine("\nNo patients found.");
+            }
+
+            reader.Close();
+            conn.Close();
+            Utility.PressAnyKey();
+        }
+
         public void ShowMainMenu()
         {
             while (true)
@@ -179,6 +224,7 @@ namespace HealthClinicApp
                 Console.WriteLine();
                 Console.WriteLine("1. Register New Patient");
                 Console.WriteLine("2. Update Patient Information");
+                Console.WriteLine("3. Search Patient Records");
                 Console.WriteLine("0. Exit");
                 Console.WriteLine();
 
@@ -192,6 +238,10 @@ namespace HealthClinicApp
                 else if (choice == "2")
                 {
                     UpdatePatientInformation();
+                }
+                else if (choice == "3")
+                {
+                    SearchPatientRecords();
                 }
                 else if (choice == "0")
                 {

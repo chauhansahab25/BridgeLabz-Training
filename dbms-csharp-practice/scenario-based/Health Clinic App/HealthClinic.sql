@@ -17,4 +17,7 @@ CREATE TABLE patients (
 -- UC-1.2: Update Patient Information
 -- UPDATE patients SET name = @name, phone = @phone, email = @email, address = @address, blood_group = @bloodGroup WHERE patient_id = @patientId
 
+-- UC-1.3: Search Patient Records
+-- SELECT * FROM patients WHERE name LIKE @search OR patient_id = @id OR phone = @search
+
 SELECT * FROM patients;

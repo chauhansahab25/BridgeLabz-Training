@@ -6,5 +6,6 @@ namespace HealthClinicApp
     {
         void RegisterNewPatient();
         void UpdatePatientInformation();
+        void SearchPatientRecords();
     }
 }
