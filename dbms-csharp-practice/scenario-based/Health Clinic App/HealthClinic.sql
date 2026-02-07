@@ -10,4 +10,11 @@ CREATE TABLE patients (
     address NVARCHAR(255),
     blood_group NVARCHAR(5)
 );
+
+-- UC-1.1: Register New Patient
+-- INSERT INTO patients (name, dob, phone, email, address, blood_group) VALUES (@name, @dob, @phone, @email, @address, @bloodGroup)
+
+-- UC-1.2: Update Patient Information
+-- UPDATE patients SET name = @name, phone = @phone, email = @email, address = @address, blood_group = @bloodGroup WHERE patient_id = @patientId
+
 SELECT * FROM patients;
