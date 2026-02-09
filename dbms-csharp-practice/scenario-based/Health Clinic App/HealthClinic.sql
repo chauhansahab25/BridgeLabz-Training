@@ -66,6 +66,27 @@ CREATE TABLE prescriptions (
     FOREIGN KEY (visit_id) REFERENCES visits(visit_id)
 );
 
+CREATE TABLE bills (
+    bill_id INT PRIMARY KEY IDENTITY(1,1),
+    visit_id INT,
+    consultation_fee DECIMAL(10,2),
+    additional_charges DECIMAL(10,2),
+    total_amount DECIMAL(10,2),
+    payment_status NVARCHAR(20),
+    payment_date DATETIME,
+    payment_mode NVARCHAR(50),
+    FOREIGN KEY (visit_id) REFERENCES visits(visit_id)
+);
+
+CREATE TABLE payment_transactions (
+    transaction_id INT PRIMARY KEY IDENTITY(1,1),
+    bill_id INT,
+    amount DECIMAL(10,2),
+    payment_mode NVARCHAR(50),
+    transaction_date DATETIME,
+    FOREIGN KEY (bill_id) REFERENCES bills(bill_id)
+);
+
 -- UC-1.1: Register New Patient
 -- INSERT INTO patients (name, dob, phone, email, address, blood_group) VALUES (@name, @dob, @phone, @email, @address, @bloodGroup)
 
@@ -117,6 +138,19 @@ CREATE TABLE prescriptions (
 -- UC-4.3: Add Prescription Details
 -- INSERT INTO prescriptions (visit_id, medicine_name, dosage, duration) VALUES (@visitId, @medicineName, @dosage, @duration)
 
+-- UC-5.1: Generate Bill for Visit
+-- INSERT INTO bills (visit_id, consultation_fee, additional_charges, total_amount, payment_status) VALUES (@visitId, @consultationFee, @additionalCharges, @totalAmount, 'UNPAID')
+
+-- UC-5.2: Record Payment
+-- UPDATE bills SET payment_status = 'PAID', payment_date = GETDATE(), payment_mode = @paymentMode WHERE bill_id = @billId
+-- INSERT INTO payment_transactions (bill_id, amount, payment_mode, transaction_date) VALUES (@billId, @amount, @paymentMode, GETDATE())
+
+-- UC-5.3: View Outstanding Bills
+-- SELECT b.bill_id, p.name AS patient_name, b.total_amount, b.payment_status, SUM(b.total_amount) OVER (PARTITION BY v.patient_id) as patient_total FROM bills b JOIN visits v ON b.visit_id = v.visit_id JOIN patients p ON v.patient_id = p.patient_id WHERE b.payment_status = 'UNPAID'
+
+-- UC-5.4: Generate Revenue Report
+-- SELECT CONVERT(DATE, b.payment_date) as payment_date, d.name AS doctor_name, s.specialty_name, SUM(b.total_amount) as total_revenue FROM bills b JOIN visits v ON b.visit_id = v.visit_id JOIN doctors d ON v.doctor_id = d.doctor_id JOIN specialties s ON d.specialty_id = s.specialty_id WHERE b.payment_status = 'PAID' AND b.payment_date BETWEEN @startDate AND @endDate GROUP BY CONVERT(DATE, b.payment_date), d.name, s.specialty_name HAVING SUM(b.total_amount) > 0
+
 -- Sample Data
 INSERT INTO specialties (specialty_name) VALUES ('Cardiology'), ('Neurology'), ('Pediatrics'), ('Orthopedics'), ('Dermatology');
 
@@ -126,10 +160,5 @@ SELECT * FROM specialties;
 SELECT * FROM appointments;
 SELECT * FROM visits;
 SELECT * FROM prescriptions;
-
-DELETE FROM specialties
-WHERE specialty_id IN (
-    SELECT TOP 5 specialty_id
-    FROM specialties
-    ORDER BY specialty_id DESC
-);
+SELECT * FROM bills;
+SELECT * FROM payment_transactions;
