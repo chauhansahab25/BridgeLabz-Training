@@ -2,7 +2,7 @@ using System;
 
 namespace HealthClinicApp
 {
-    public class Utility
+    public class AppointmentUtility
     {
         public static void PressAnyKey()
         {
