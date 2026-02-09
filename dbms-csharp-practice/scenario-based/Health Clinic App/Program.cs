@@ -14,6 +14,7 @@ class Program
             Console.WriteLine();
             Console.WriteLine("1. Patient Management");
             Console.WriteLine("2. Doctor Management");
+            Console.WriteLine("3. Appointment Management");
             Console.WriteLine("0. Exit");
             Console.WriteLine();
 
@@ -29,6 +30,11 @@ class Program
             {
                 DoctorMenu doctorMenu = new DoctorMenu();
                 doctorMenu.ShowDoctorMenu();
+            }
+            else if (choice == "3")
+            {
+                AppointmentMenu appointmentMenu = new AppointmentMenu();
+                appointmentMenu.ShowAppointmentMenu();
             }
             else if (choice == "0")
             {

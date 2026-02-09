@@ -19,7 +19,7 @@ namespace HealthClinicApp
             Console.Write("Enter Consultation Fee: ");
             decimal fee = decimal.Parse(Console.ReadLine());
 
-            SqlConnection conn = DoctorConnection.GetConnection();
+            SqlConnection conn = DatabaseConnection.GetConnection();
 
             string insertQuery = "INSERT INTO doctors (name, specialty_id, phone, consultation_fee) VALUES (@name, @specialtyId, @phone, @fee)";
             SqlCommand cmd = new SqlCommand(insertQuery, conn);
@@ -43,7 +43,7 @@ namespace HealthClinicApp
             Console.Write("Enter Doctor ID: ");
             int doctorId = int.Parse(Console.ReadLine());
 
-            SqlConnection conn = DoctorConnection.GetConnection();
+            SqlConnection conn = DatabaseConnection.GetConnection();
 
             string displayQuery = "SELECT specialty_id, specialty_name FROM specialties";
             SqlCommand displayCmd = new SqlCommand(displayQuery, conn);
@@ -83,7 +83,7 @@ namespace HealthClinicApp
             Console.WriteLine("Enter Specialty Name ('Cardiology','Neurology', 'Pediatrics', 'Orthopedics', 'Dermatology'): ");
             string specialtyName = Console.ReadLine();
 
-            SqlConnection conn = DoctorConnection.GetConnection();
+            SqlConnection conn = DatabaseConnection.GetConnection();
 
             string query = "SELECT d.doctor_id, d.name, d.phone, d.consultation_fee FROM doctors d JOIN specialties s ON d.specialty_id = s.specialty_id WHERE s.specialty_name = @specialtyName AND d.is_active = 1";
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -120,7 +120,7 @@ namespace HealthClinicApp
             Console.Write("Enter Doctor ID: ");
             int doctorId = int.Parse(Console.ReadLine());
 
-            SqlConnection conn = DoctorConnection.GetConnection();
+            SqlConnection conn = DatabaseConnection.GetConnection();
 
             string checkQuery = "SELECT COUNT(*) FROM appointments WHERE doctor_id = @doctorId AND appointment_date > GETDATE() AND status = 'SCHEDULED'";
             SqlCommand checkCmd = new SqlCommand(checkQuery, conn);
