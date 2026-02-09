@@ -6,10 +6,16 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
     public class AddressBook : IAddressBook
     {
         private List<Contact> contacts;
+        private FileIO fileIO; //UC13
+        private CSVHandler csvHandler; //UC14
+        private JSONHandler jsonHandler; //UC15
 
         public AddressBook()
         {
             contacts = new List<Contact>();
+            fileIO = new FileIO(); //UC13
+            csvHandler = new CSVHandler(); //UC14
+            jsonHandler = new JSONHandler(); //UC15
         }
 
         //UC6 add default contact
@@ -68,7 +74,6 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
         }
 
         //UC11 sort contacts alphabetically by name
-       // UC11 sort contacts alphabetically by person's name
         public void SortContactsByName() 
         {
             contacts.Sort((c1, c2) =>
@@ -77,6 +82,30 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
             c2.FirstName + c2.LastName,
             StringComparison.OrdinalIgnoreCase));
             Console.WriteLine("Contacts sorted alphabetically:");
+            DisplayAllContacts();
+        }
+
+        //UC12 sort contacts by city
+        public void SortContactsByCity()
+        {
+            contacts.Sort((c1, c2) => string.Compare(c1.City, c2.City, StringComparison.OrdinalIgnoreCase));
+            Console.WriteLine("Contacts sorted by City:");
+            DisplayAllContacts();
+        }
+
+        //UC12 sort contacts by state
+        public void SortContactsByState()
+        {
+            contacts.Sort((c1, c2) => string.Compare(c1.State, c2.State, StringComparison.OrdinalIgnoreCase));
+            Console.WriteLine("Contacts sorted by State:");
+            DisplayAllContacts();
+        }
+
+        //UC12 sort contacts by zip
+        public void SortContactsByZip()
+        {
+            contacts.Sort((c1, c2) => string.Compare(c1.Zip, c2.Zip, StringComparison.OrdinalIgnoreCase));
+            Console.WriteLine("Contacts sorted by Zip:");
             DisplayAllContacts();
         }
 
@@ -130,6 +159,42 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
         public List<Contact> GetAllContacts()
         {
             return contacts;
+        }
+
+        //UC13 write to file
+        public void WriteToFile()
+        {
+            fileIO.WriteToFile(contacts);
+        }
+
+        //UC13 read from file
+        public void ReadFromFile()
+        {
+            contacts = fileIO.ReadFromFile();
+        }
+
+        //UC14 write to CSV
+        public void WriteToCSV()
+        {
+            csvHandler.WriteToCSV(contacts);
+        }
+
+        //UC14 read from CSV
+        public void ReadFromCSV()
+        {
+            contacts = csvHandler.ReadFromCSV();
+        }
+
+        //UC15 write to JSON
+        public void WriteToJSON()
+        {
+            jsonHandler.WriteToJSON(contacts);
+        }
+
+        //UC15 read from JSON
+        public void ReadFromJSON()
+        {
+            contacts = jsonHandler.ReadFromJSON();
         }
     }
 }

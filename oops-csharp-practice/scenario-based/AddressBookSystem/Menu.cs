@@ -59,7 +59,16 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                 Console.WriteLine("4. Edit Contact");
                 Console.WriteLine("5. Delete Contact");
                 Console.WriteLine("6. Sort Contacts by Name"); // UC11
-                Console.WriteLine("7. Back");
+                Console.WriteLine("7. Sort Contacts by City"); // UC12
+                Console.WriteLine("8. Sort Contacts by State"); // UC12
+                Console.WriteLine("9. Sort Contacts by Zip"); // UC12
+                Console.WriteLine("10. Write to File"); // UC13
+                Console.WriteLine("11. Read from File"); // UC13
+                Console.WriteLine("12. Write to CSV"); // UC14
+                Console.WriteLine("13. Read from CSV"); // UC14
+                Console.WriteLine("14. Write to JSON"); // UC15
+                Console.WriteLine("15. Read from JSON"); // UC15
+                Console.WriteLine("16. Back");
 
                 int choice = int.Parse(Console.ReadLine());
 
@@ -71,7 +80,16 @@ namespace CG_Practice.oopsscenario.AddressBookSystem
                     case 4: book.EditContact(); break;
                     case 5: book.DeleteContact(); break;
                     case 6: book.SortContactsByName(); break; // UC11
-                    case 7: back = true; break;
+                    case 7: book.SortContactsByCity(); break; // UC12
+                    case 8: book.SortContactsByState(); break; // UC12
+                    case 9: book.SortContactsByZip(); break; // UC12
+                    case 10: book.WriteToFile(); break; // UC13
+                    case 11: book.ReadFromFile(); break; // UC13
+                    case 12: book.WriteToCSV(); break; // UC14
+                    case 13: book.ReadFromCSV(); break; // UC14
+                    case 14: book.WriteToJSON(); break; // UC15
+                    case 15: book.ReadFromJSON(); break; // UC15
+                    case 16: back = true; break;
                 }
             }
         }
