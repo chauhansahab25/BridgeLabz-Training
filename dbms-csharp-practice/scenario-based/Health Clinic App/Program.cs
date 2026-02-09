@@ -17,6 +17,7 @@ class Program
             Console.WriteLine("3. Appointment Management");
             Console.WriteLine("4. Visit Management");
             Console.WriteLine("5. Billing & Payments");
+            Console.WriteLine("6. System Administration");
             Console.WriteLine("0. Exit");
             Console.WriteLine();
 
@@ -47,6 +48,11 @@ class Program
             {
                 BillingMenu billingMenu = new BillingMenu();
                 billingMenu.ShowBillingMenu();
+            }
+            else if (choice == "6")
+            {
+                AdminMenu adminMenu = new AdminMenu();
+                adminMenu.ShowAdminMenu();
             }
             else if (choice == "0")
             {

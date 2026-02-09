@@ -87,6 +87,50 @@ CREATE TABLE payment_transactions (
     FOREIGN KEY (bill_id) REFERENCES bills(bill_id)
 );
 
+CREATE TABLE audit_log (
+    audit_id INT PRIMARY KEY IDENTITY(1,1),
+    table_name NVARCHAR(100),
+    action NVARCHAR(50),
+    user_name NVARCHAR(100),
+    action_timestamp DATETIME DEFAULT GETDATE()
+);
+
+-- Trigger for audit logging on patients table
+CREATE TRIGGER trg_patients_audit
+ON patients
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+    DECLARE @action NVARCHAR(50)
+    IF EXISTS (SELECT * FROM inserted) AND EXISTS (SELECT * FROM deleted)
+        SET @action = 'UPDATE'
+    ELSE IF EXISTS (SELECT * FROM inserted)
+        SET @action = 'INSERT'
+    ELSE
+        SET @action = 'DELETE'
+    
+    INSERT INTO audit_log (table_name, action, user_name)
+    VALUES ('patients', @action, SYSTEM_USER)
+END;
+
+-- Trigger for audit logging on doctors table
+CREATE TRIGGER trg_doctors_audit
+ON doctors
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+    DECLARE @action NVARCHAR(50)
+    IF EXISTS (SELECT * FROM inserted) AND EXISTS (SELECT * FROM deleted)
+        SET @action = 'UPDATE'
+    ELSE IF EXISTS (SELECT * FROM inserted)
+        SET @action = 'INSERT'
+    ELSE
+        SET @action = 'DELETE'
+    
+    INSERT INTO audit_log (table_name, action, user_name)
+    VALUES ('doctors', @action, SYSTEM_USER)
+END;
+
 -- UC-1.1: Register New Patient
 -- INSERT INTO patients (name, dob, phone, email, address, blood_group) VALUES (@name, @dob, @phone, @email, @address, @bloodGroup)
 
@@ -151,6 +195,18 @@ CREATE TABLE payment_transactions (
 -- UC-5.4: Generate Revenue Report
 -- SELECT CONVERT(DATE, b.payment_date) as payment_date, d.name AS doctor_name, s.specialty_name, SUM(b.total_amount) as total_revenue FROM bills b JOIN visits v ON b.visit_id = v.visit_id JOIN doctors d ON v.doctor_id = d.doctor_id JOIN specialties s ON d.specialty_id = s.specialty_id WHERE b.payment_status = 'PAID' AND b.payment_date BETWEEN @startDate AND @endDate GROUP BY CONVERT(DATE, b.payment_date), d.name, s.specialty_name HAVING SUM(b.total_amount) > 0
 
+-- UC-6.1: Manage Specialty Lookup
+-- INSERT INTO specialties (specialty_name) VALUES (@name)
+-- UPDATE specialties SET specialty_name = @name WHERE specialty_id = @id
+-- SELECT COUNT(*) FROM doctors WHERE specialty_id = @id
+-- DELETE FROM specialties WHERE specialty_id = @id
+
+-- UC-6.2: Database Backup
+-- Uses DatabaseMetaData and batch operations
+
+-- UC-6.3: View System Audit Logs
+-- SELECT * FROM audit_log WHERE table_name = @tableName AND action_timestamp >= @startDate ORDER BY action_timestamp DESC
+
 -- Sample Data
 INSERT INTO specialties (specialty_name) VALUES ('Cardiology'), ('Neurology'), ('Pediatrics'), ('Orthopedics'), ('Dermatology');
 
@@ -162,3 +218,4 @@ SELECT * FROM visits;
 SELECT * FROM prescriptions;
 SELECT * FROM bills;
 SELECT * FROM payment_transactions;
+SELECT * FROM audit_log;
