@@ -1,6 +1,5 @@
 # Core C# Practice – BridgeLabz Training
 
----
 <p align="center">
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" />
 </p>
@@ -11,6 +10,7 @@
   <img src="https://img.shields.io/badge/Training-BridgeLabz-orange?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Status-Learning-success?style=for-the-badge" />
 </p>
+---
 ## 📌 Repository Information
 | Field | Details |
 |-----|--------|
@@ -192,6 +192,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz's training program for learning, practice, and assessment purposes. |
+
 
 
 
