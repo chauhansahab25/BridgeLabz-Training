@@ -10,36 +10,40 @@
   <img src="https://img.shields.io/badge/Training-BridgeLabz-orange?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Status-Learning-success?style=for-the-badge" />
 </p>
+
 ---
+
 ## 📌 Repository Information
+
 | Field | Details |
-|-----|--------|
+|-------|----------|
 | Training Program | BridgeLabz |
 | Technology | Core C# |
 | Framework | .NET |
 | Repository Name | BridgeLabz-Training |
 | Practice Module | Core C# Practice |
-| 🌐 Main Repository Link | https://github.com/chauhansahab25/BridgeLabz-Training | 
-| 🌿 Core C# Folder Link | https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice | 
-| OOPS C# Folder Link | https://github.com/chauhansahab25/BridgeLabz-Training/tree/oops-csharp/oops-csharp-practice |
+| 🌐 Main Repository Link | https://github.com/chauhansahab25/BridgeLabz-Training |
+| 🌿 Core C# Folder Link | https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice |
+| 🌳 OOPS C# Folder Link | https://github.com/chauhansahab25/BridgeLabz-Training/tree/oops-csharp/oops-csharp-practice |
 
 ---
 
-##📂 Repository Structure
+## 📂 Repository Structure
 
-🔹 Core C# Branch Structure
-| Folder Name        | Description                                 | Link                                                                                                                            |
-| ------------------ | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| gcr-codebase       | Guided Code Review based Core C# programs   | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/gcr-codebase)       |
+### 🔹 Core C# Branch Structure
+
+| Folder Name | Description | Link |
+|-------------|-------------|------|
+| gcr-codebase | Guided Code Review based Core C# programs | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/gcr-codebase) |
 | leet-code-codebase | Logic & algorithm problems (LeetCode style) | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/leet-code-codebase) |
-| scenario-based     | Real-world scenario-based C# programs       | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/scenario-based)     |
+| scenario-based | Real-world scenario-based C# programs | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice/scenario-based) |
 
-🔹 OOPS C# Branch Structure
+### 🔹 OOPS C# Branch Structure
 
-| Folder Name    | Description                               | Link                                                                                                               |
-| -------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| gcr-codebase   | Guided Code Review based OOPS C# programs | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/oops-csharp/oops-csharp-practice/gcr-codebase)   |
-| scenario-based | Real-world OOPS-based C# programs         | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/oops-csharp/oops-csharp-practice/scenario-based) |
+| Folder Name | Description | Link |
+|-------------|-------------|------|
+| gcr-codebase | Guided Code Review based OOPS C# programs | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/oops-csharp/oops-csharp-practice/gcr-codebase) |
+| scenario-based | Real-world OOPS-based C# programs | [Open](https://github.com/chauhansahab25/BridgeLabz-Training/tree/oops-csharp/oops-csharp-practice/scenario-based) |
 
 ---
 
@@ -192,6 +196,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz's training program for learning, practice, and assessment purposes. |
+
 
 
 
