@@ -1,7 +1,16 @@
 # Core C# Practice – BridgeLabz Training
 
 ---
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" />
+</p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-C%23-blue?style=for-the-badge&logo=csharp" />
+  <img src="https://img.shields.io/badge/Framework-.NET-purple?style=for-the-badge&logo=dotnet" />
+  <img src="https://img.shields.io/badge/Training-BridgeLabz-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Learning-success?style=for-the-badge" />
+</p>
 ## 📌 Repository Information
 | Field | Details |
 |-----|--------|
@@ -10,8 +19,8 @@
 | Framework | .NET |
 | Repository Name | BridgeLabz-Training |
 | Practice Module | Core C# Practice |
-| Main Repository Link | https://github.com/chauhansahab25/BridgeLabz-Training | 
-| Core C# Folder Link | https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice | 
+| 🌐 Main Repository Link | https://github.com/chauhansahab25/BridgeLabz-Training | 
+| 🌿 Core C# Folder Link | https://github.com/chauhansahab25/BridgeLabz-Training/tree/core-csharp-practice/core-csharp-practice | 
 | OOPS C# Folder Link | https://github.com/chauhansahab25/BridgeLabz-Training/tree/oops-csharp/oops-csharp-practice |
 
 ---
@@ -112,6 +121,28 @@
 | **Day 33** | Wednesday, January 28, 2026 | CSV Handling & Exception-Driven Validation Systems         | 📄 Studied **CSV concepts** including reading, writing, parsing, and data validation<br>✈️ Implemented **AeroVigil – Flight Validation & Fuel Management System**<br>🔎 Built validation logic for flight number format, flight name, passenger capacity, and fuel levels<br>⚠️ Designed and used **custom exception (InvalidFlightException)** for invalid inputs                                                                                                  |
 | **Day 34** | Thursday, January 29, 2026  | Collections, Aggregation Logic & JSON Processing           |🧾 Studied **JSON fundamentals** including reading, writing, parsing, and schema validation<br> 📊 Developed **StreamBuzz – Creator Engagement Tracker** console application<br>📋 Managed creators using a static **List** and processed results using **Dictionary**<br>📈 Implemented logic to identify top-performing creators based on like thresholds<br>📉 Calculated overall average weekly likes across all creators  |
 | **Day 35** | Friday, January 30, 2026    | String Processing, Abstraction & OOP-Based Billing Systems | 🧩 Implemented **Lexical Twist** problem involving string reversal, transformation, vowel/consonant analysis, and input validation<br>🚚 Developed **FutureLogistics – Goods Transport Billing System** using **abstraction and inheritance**<br>🏗️ Designed abstract base class **GoodsTransport** with protected attributes and abstract methods<br>🧱 Implemented **BrickTransport** and **TimberTransport** classes with vehicle selection, tax, and discount calculations<br>🧮 Applied **polymorphism** to dynamically compute total charges using a **Utility class** for input parsing |
+---
+✅ Week 8 (Day 36 - Day 41 | Feb 2, 2026 - Feb 7, 2026)
+| Day        | Date                     | Focus Area                                                 | Key Activities      |
+| ---------- | ------------------------ | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Day 36** | Monday, February 2, 2026 | JSON Processing, Design Principles & Advanced String Logic | 📌 Studied **JSON and Data Handling in C#** including reading, writing, parsing, filtering, merging, and schema validation using `Newtonsoft.Json`<br>🧩 Practiced converting C# objects and lists into JSON arrays and validating JSON structure<br>📐 Studied **OOP Design Principles**: SOLID, KISS, DRY, DIY and their practical application in clean architecture<br>✔️ Applied validations: length check, no spaces/digits/special characters<br>🔎 Removed characters with **even ASCII values**, reversed the string, and applied case transformation based on position |
+| **Day 37** | Tuesday, February 3, 2026 | Multi-Threading in .NET | 🧵 Studied **Multi-Threading concepts in .NET (C#)** and concurrent execution fundamentals<br>⚙️ Learned to create threads using the **Thread class** (`ThreadStart`, `ParameterizedThreadStart`, and Lambda expressions)<br>📊 Studied **Thread Life Cycle and States** (Unstarted, Running, WaitSleepJoin, Stopped, etc.)<br>🛠️ Practiced core thread methods like `Start()`, `Join()`, `Sleep()` and thread naming<br>📚 Understood **Process vs Thread in .NET** and CLR thread management<br>🏆 Strengthened understanding of concurrency, responsiveness, and parallel task execution |
+| **Day 38** | Wednesday, February 4, 2026 | SQL, RDBMS & MSSQL Fundamentals | 📤 Completed **Submission of Multi-Threading assignment/project**<br>🗄️ Studied **RDBMS fundamentals** including database design, normalization, keys, joins, subqueries, transactions, indexing, performance tuning, and security best practices<br>📘 Learned **Core MSSQL programming concepts and syntax**<br>🔐 Explored **constraints and keys** to maintain data integrity<br>🔗 Practiced **SQL joins and subqueries** with real-world examples<br>📊 Studied **aggregate functions** and grouping techniques<br>⚙️ Learned **Stored Procedures** and **User-Defined Functions (UDFs)**<br>👁️ Implemented **Views** for abstraction and security<br>🔄 Understood **Cursors** for row-by-row processing<br>🛡️ Practiced **DCL commands** for managing user roles and permissions |
+| **Day 39** | Thursday, February 5, 2026 | Project-Based Training – Smart City System & Health Clinic App | 🏙️ Started **TechVille Smart City Management System**<br>📦 Implemented **Modular Architecture (Modules 1–20)** including:<br>• <br>• Linked List, Stack, Queue & HashMap implementations<br>• File I/O, Serialization & Persistence System<br>• Comprehensive Custom Exception Management<br>• Regex-based Data Validation & Pattern Matching<br><br>🏥 Built **Health Clinic Management System** with complete SQL integration:<br>• Patient, Doctor & Appointment Management<br>🚀 Applied full-stack backend principles combining **Core C#, OOP, DSA & SQL** in real-world system design |
+| **Day 40** | Friday, February 6, 2026 | Complete Revision – Core C# & DSA | 🔁 Revised **Core C# fundamentals** (Variables, Control Flow, Methods, Strings)<br>🧱 Reviewed **OOPS concepts** (Encapsulation, Abstraction, Inheritance, Polymorphism, Interfaces)<br>📦 Revisited **Collections & Generics** concepts<br>🧮 Practiced **Sorting & Searching Algorithms** with time complexity analysis<br>🗂️ Revised **Data Structures** (LinkedList, Stack, Queue, HashMap, Trees basics)<br>🗄️ Reviewed **SQL & RDBMS concepts** (Joins, Normalization, Keys, Indexing)<br>🧵 Quick recap of **Multi-threading, Exception Handling & File I/O** |
+| **Day 41** | Saturday, February 7, 2026 | Project Submission & DBMS Implementation | 📤 Submitted **DBMS command query files**<br>🏥 Completed and submitted **Healthcare Application** project<br>🗄️ Submitted all associated **SQL files (tables, joins, procedures, queries)**<br>🔄 Completed and finalized remaining previous pending projects<br>📁 Organized project structure and ensured proper documentation |
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -161,6 +192,7 @@
 | |
 |--|
 | This repository is maintained as part of BridgeLabz's training program for learning, practice, and assessment purposes. |
+
 
 
 
