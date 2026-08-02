@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+
+class Result
+{
+    public static int simpleArraySum(List<int> ar)
+    {
+        int sum = 0;
+
+        for (int i = 0; i < ar.Count; i++)
+        {
+            sum += ar[i];
+        }
+
+        return sum;
+    }
+}
+
+class Solution
+{
+    public static void Main(string[] args)
+    {
+        TextWriter textWriter = new StreamWriter(@Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+
+        int arCount = Convert.ToInt32(Console.ReadLine().Trim());
+
+        List<int> ar = Console.ReadLine()
+            .TrimEnd()
+            .Split(' ')
+            .ToList()
+            .ConvertAll(int.Parse);
+
+        int result = Result.simpleArraySum(ar);
+
+        textWriter.WriteLine(result);
+
+        textWriter.Flush();
+        textWriter.Close();
+    }
+}
