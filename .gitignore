@@ -1,0 +1,28 @@
+# Build output
+bin/
+obj/
+
+# Project files
+*.csproj
+*.vbproj
+*.fsproj
+*.sln
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+*.rsuser
+
+# NuGet
+*.nupkg
+packages/
+project.lock.json
+
+# OS
+.DS_Store
+Thumbs.db
