@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "gNklEsUfvOQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\priya\\OneDrive\\Desktop\\BridgeLabz-Training\\Day-2\\Day-2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\priya\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.26\\microsoft.netcore.app.ref.8.0.26.nupkg.sha512",
+    "C:\\Users\\priya\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.26\\microsoft.netcore.app.host.win-x64.8.0.26.nupkg.sha512"
+  ],
+  "logs": []
+}

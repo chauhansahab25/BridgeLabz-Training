@@ -1,0 +1,15 @@
+C:\Users\priya\OneDrive\Desktop\BridgeLabz-Training\Day-2\bin\Debug\net8.0\Day-2.exe
+C:\Users\priya\OneDrive\Desktop\BridgeLabz-Training\Day-2\bin\Debug\net8.0\Day-2.deps.json
+C:\Users\priya\OneDrive\Desktop\BridgeLabz-Training\Day-2\bin\Debug\net8.0\Day-2.runtimeconfig.json
+C:\Users\priya\OneDrive\Desktop\BridgeLabz-Training\Day-2\bin\Debug\net8.0\Day-2.dll
+C:\Users\priya\OneDrive\Desktop\BridgeLabz-Training\Day-2\bin\Debug\net8.0\Day-2.pdb
+C:\Users\priya\OneDrive\Desktop\BridgeLabz-Training\Day-2\obj\Debug\net8.0\Day-2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\priya\OneDrive\Desktop\BridgeLabz-Training\Day-2\obj\Debug\net8.0\Day-2.AssemblyInfoInputs.cache
+C:\Users\priya\OneDrive\Desktop\BridgeLabz-Training\Day-2\obj\Debug\net8.0\Day-2.AssemblyInfo.cs
+C:\Users\priya\OneDrive\Desktop\BridgeLabz-Training\Day-2\obj\Debug\net8.0\Day-2.csproj.CoreCompileInputs.cache
+C:\Users\priya\OneDrive\Desktop\BridgeLabz-Training\Day-2\obj\Debug\net8.0\Day-2.sourcelink.json
+C:\Users\priya\OneDrive\Desktop\BridgeLabz-Training\Day-2\obj\Debug\net8.0\Day-2.dll
+C:\Users\priya\OneDrive\Desktop\BridgeLabz-Training\Day-2\obj\Debug\net8.0\refint\Day-2.dll
+C:\Users\priya\OneDrive\Desktop\BridgeLabz-Training\Day-2\obj\Debug\net8.0\Day-2.pdb
+C:\Users\priya\OneDrive\Desktop\BridgeLabz-Training\Day-2\obj\Debug\net8.0\Day-2.genruntimeconfig.cache
+C:\Users\priya\OneDrive\Desktop\BridgeLabz-Training\Day-2\obj\Debug\net8.0\ref\Day-2.dll
